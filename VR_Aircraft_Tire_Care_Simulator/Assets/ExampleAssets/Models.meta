@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:VR_Aircraft_Tire_Care_Simulator/Assets/ExampleAssets/Models.meta
 guid: aa97895f3852bd44399ef0893bec4f5e
+=======
+guid: 990f5c2df70993f4987a388ca178996a
+>>>>>>> parent of 660038e (Delete Sample folder and add new folder):VR_Aircraft_Tire_Care_Simulator/Assets/ExampleAssets.meta
+=======
+guid: aa97895f3852bd44399ef0893bec4f5e
+>>>>>>> parent of 660038e (Delete Sample folder and add new folder)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
