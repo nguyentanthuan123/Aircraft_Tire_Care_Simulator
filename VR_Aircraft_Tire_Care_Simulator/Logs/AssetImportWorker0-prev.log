@@ -11,10 +11,11 @@ C:\Program Files\Unity\Hub\Editor\2020.3.15f2\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Hercules/Documents/GitHub/Aircraft_Tire_Care_Simulator/VR_Aircraft_Tire_Care_Simulator
+C:/Programing/Unity project/VR_Aircraft_Tire_Care_Simulator
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 <<<<<<< HEAD
 63649
 Successfully changed project path to: C:/Users/Hercules/Documents/GitHub/Aircraft_Tire_Care_Simulator/VR_Aircraft_Tire_Care_Simulator
@@ -30,9 +31,17 @@ Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 65.90 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 1.06 ms.
 >>>>>>> parent of 660038e (Delete Sample folder and add new folder)
+=======
+52349
+Successfully changed project path to: C:/Programing/Unity project/VR_Aircraft_Tire_Care_Simulator
+C:/Programing/Unity project/VR_Aircraft_Tire_Care_Simulator
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 82.06 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+>>>>>>> parent of dc8054a (Build Player Obj)
 Initialize engine version: 2020.3.15f2 (6cf78cb77498)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Hercules/Documents/GitHub/Aircraft_Tire_Care_Simulator/VR_Aircraft_Tire_Care_Simulator/Assets
+[Subsystems] Discovering subsystems at path C:/Programing/Unity project/VR_Aircraft_Tire_Care_Simulator/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -45,6 +54,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< HEAD
 <<<<<<< HEAD
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
 Begin MonoManager ReloadAssembly
@@ -73,11 +83,27 @@ Domain Reload Profiling:
 	ReloadAssembly (3699ms)
 >>>>>>> parent of 660038e (Delete Sample folder and add new folder)
 		BeginReloadAssembly (46ms)
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.035875 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 50.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in 11.639 seconds
+Domain Reload Profiling:
+	ReloadAssembly (11640ms)
+		BeginReloadAssembly (107ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 		EndReloadAssembly (440ms)
 			LoadAssemblies (44ms)
@@ -109,12 +135,29 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (75ms)
 				ProcessInitializeOnLoadMethodAttributes (32ms)
 >>>>>>> parent of 660038e (Delete Sample folder and add new folder)
+=======
+		EndReloadAssembly (440ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (149ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (180ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (50ms)
+				BeforeProcessingInitializeOnLoad (16ms)
+				ProcessInitializeOnLoadAttributes (80ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.010113 seconds.
 Begin MonoManager ReloadAssembly
@@ -161,10 +204,23 @@ Domain Reload Profiling:
 	ReloadAssembly (1372ms)
 		BeginReloadAssembly (157ms)
 >>>>>>> parent of 660038e (Delete Sample folder and add new folder)
+=======
+Registered in 0.037708 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 54.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.122 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1123ms)
+		BeginReloadAssembly (126ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			CreateAndSetChildDomain (18ms)
 		EndReloadAssembly (1115ms)
@@ -198,6 +254,23 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (105ms)
 				ProcessInitializeOnLoadAttributes (316ms)
 				ProcessInitializeOnLoadMethodAttributes (18ms)
+=======
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (935ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (268ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (405ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (55ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (245ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 				AfterProcessingInitializeOnLoad (6ms)
 >>>>>>> parent of 660038e (Delete Sample folder and add new folder)
 				EditorAssembliesLoaded (0ms)
@@ -210,6 +283,7 @@ Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Ren
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 <<<<<<< HEAD
+<<<<<<< HEAD
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
 Refreshing native plugins compatible for Editor in 1.04 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.14 ms.
@@ -219,6 +293,17 @@ System memory in use after: 173.5 MB.
 
 Unloading 78 unused Assets to reduce memory usage. Loaded Objects now: 4216.
 Total: 6.110500 ms (FindLiveObjects: 0.684000 ms CreateObjectMapping: 0.272700 ms MarkObjects: 3.664800 ms  DeleteObjects: 1.486200 ms)
+=======
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2701 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.1 MB.
+System memory in use after: 118.3 MB.
+
+Unloading 55 unused Assets to reduce memory usage. Loaded Objects now: 3097.
+Total: 4.537800 ms (FindLiveObjects: 0.553200 ms CreateObjectMapping: 0.187900 ms MarkObjects: 2.623400 ms  DeleteObjects: 1.170800 ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -233,6 +318,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   path: Assets/Player/Prefab/LeftHand.prefab
   artifactKey: Guid(0d0a0cd213a3e8e4b85780c32620cf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Player/Prefab/LeftHand.prefab using Guid(0d0a0cd213a3e8e4b85780c32620cf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec4f3a665e8e15ebaa6aebfde8fd12af') in 0.044986 seconds 
@@ -309,10 +395,17 @@ Received Import Request.
   artifactKey: Guid(04681f0bd47020a4388c4d98bd9582de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Player/Prefab/RightHand.prefab using Guid(04681f0bd47020a4388c4d98bd9582de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '890e021a639d5a2dc197c233515b31a2') in 0.009081 seconds 
   Import took 0.016996 seconds .
+=======
+  path: Assets/Readme.asset
+  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ffd2c44ffeb50c574abb5d0c4453328') in 0.072866 seconds 
+  Import took 0.104457 seconds .
+>>>>>>> parent of dc8054a (Build Player Obj)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 Registered in 0.005997 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -323,10 +416,23 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1294ms)
 		BeginReloadAssembly (127ms)
+=======
+Registered in 0.005431 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.013 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1014ms)
+		BeginReloadAssembly (105ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 			CreateAndSetChildDomain (49ms)
 		EndReloadAssembly (1107ms)
 			LoadAssemblies (94ms)
@@ -346,10 +452,33 @@ Domain Reload Profiling:
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (16ms)
+=======
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (851ms)
+			LoadAssemblies (76ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (270ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (344ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (248ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 1.52 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.15 ms.
 Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
@@ -369,6 +498,16 @@ System memory in use after: 140.6 MB.
 Unloading 56 unused Assets to reduce memory usage. Loaded Objects now: 3650.
 Total: 4.752200 ms (FindLiveObjects: 0.758500 ms CreateObjectMapping: 0.266100 ms MarkObjects: 2.639700 ms  DeleteObjects: 1.085600 ms)
 >>>>>>> parent of 660038e (Delete Sample folder and add new folder)
+=======
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2632 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.6 MB.
+System memory in use after: 114.8 MB.
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3100.
+Total: 5.886600 ms (FindLiveObjects: 0.381500 ms CreateObjectMapping: 0.128800 ms MarkObjects: 3.274000 ms  DeleteObjects: 2.100000 ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -379,9 +518,11 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 Received Import Request.
 <<<<<<< HEAD
   Time since last request: 32.410518 seconds.
@@ -489,9 +630,13 @@ Domain Reload Profiling:
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (9ms)
 Platform modules already initialized, skipping
+=======
+Received Prepare
+>>>>>>> parent of dc8054a (Build Player Obj)
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+<<<<<<< HEAD
 <<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 1.07 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.11 ms.
@@ -510,6 +655,16 @@ System memory in use after: 79.2 MB.
 
 Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 3758.
 Total: 4.877600 ms (FindLiveObjects: 0.309100 ms CreateObjectMapping: 0.084300 ms MarkObjects: 3.378800 ms  DeleteObjects: 1.104200 ms)
+=======
+Refreshing native plugins compatible for Editor in 5.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.7 MB.
+System memory in use after: 63.9 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 3100.
+Total: 11.674400 ms (FindLiveObjects: 1.080700 ms CreateObjectMapping: 0.165100 ms MarkObjects: 7.039500 ms  DeleteObjects: 3.384300 ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -523,6 +678,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 Received Import Request.
   Time since last request: 190.243647 seconds.
   path: Assets/OutsiderAssets
@@ -592,6 +748,19 @@ System memory in use after: 145.7 MB.
 
 Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 3767.
 Total: 4.412400 ms (FindLiveObjects: 0.391500 ms CreateObjectMapping: 0.093700 ms MarkObjects: 2.503300 ms  DeleteObjects: 1.421600 ms)
+=======
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 5.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.6 MB.
+System memory in use after: 63.9 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 3100.
+Total: 9.377500 ms (FindLiveObjects: 0.497100 ms CreateObjectMapping: 0.244200 ms MarkObjects: 5.072900 ms  DeleteObjects: 3.560300 ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -605,6 +774,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 Received Import Request.
   Time since last request: 686.968752 seconds.
   path: Assets/Settings/ForwardRenderer.asset
@@ -672,10 +842,25 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1205ms)
 		BeginReloadAssembly (142ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005673 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.159 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1177ms)
+		BeginReloadAssembly (240ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (34ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 			CreateAndSetChildDomain (50ms)
 		EndReloadAssembly (1005ms)
 			LoadAssemblies (103ms)
@@ -4820,10 +5005,32 @@ Domain Reload Profiling:
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (12ms)
+=======
+			CreateAndSetChildDomain (102ms)
+		EndReloadAssembly (859ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (279ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (344ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (242ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 1.10 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.12 ms.
 Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
@@ -4893,6 +5100,16 @@ System memory in use after: 161.7 MB.
 Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 4004.
 Total: 5.058600 ms (FindLiveObjects: 0.412400 ms CreateObjectMapping: 0.136900 ms MarkObjects: 3.288600 ms  DeleteObjects: 1.218900 ms)
 >>>>>>> parent of 660038e (Delete Sample folder and add new folder)
+=======
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2628 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.6 MB.
+System memory in use after: 114.9 MB.
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3103.
+Total: 4.430500 ms (FindLiveObjects: 0.432600 ms CreateObjectMapping: 0.140100 ms MarkObjects: 2.503900 ms  DeleteObjects: 1.352200 ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -4906,6 +5123,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 Received Import Request.
   Time since last request: 1479.187144 seconds.
@@ -5089,6 +5307,19 @@ System memory in use after: 161.8 MB.
 Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 4008.
 Total: 4.811300 ms (FindLiveObjects: 0.583700 ms CreateObjectMapping: 0.154900 ms MarkObjects: 2.832700 ms  DeleteObjects: 1.237800 ms)
 >>>>>>> parent of 660038e (Delete Sample folder and add new folder)
+=======
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 3.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 64.0 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 3103.
+Total: 3.957100 ms (FindLiveObjects: 0.250400 ms CreateObjectMapping: 0.072500 ms MarkObjects: 2.303200 ms  DeleteObjects: 1.329800 ms)
+>>>>>>> parent of dc8054a (Build Player Obj)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
