@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3138196469705832047}
-  - component: {fileID: 3138196469705832046}
+  - component: {fileID: -4787536466565821152}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3138196469705832046
+--- !u!114 &-4787536466565821152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3138196469705832033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73fb3a1966f127478e10eb3f55232f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 374ad31b40837724686e3202365e192e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handModelPrefab: {fileID: 6590311404474170456, guid: 8383d00c02e1e2641a92a17d1f63ae85, type: 3}
-  controllerCharacteristics: 320
+  isShowHand: 0
+  controllerCharacteristics: 256
