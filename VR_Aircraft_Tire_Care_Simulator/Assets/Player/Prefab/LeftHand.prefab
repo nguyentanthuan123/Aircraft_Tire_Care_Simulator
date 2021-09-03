@@ -43,6 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374ad31b40837724686e3202365e192e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
   handModelPrefab: {fileID: 6590311404474170456, guid: 8383d00c02e1e2641a92a17d1f63ae85, type: 3}
+  grabableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  followSpeed: 0
+  rotateSpeed: 0
+  jointDistance: 0
   isShowHand: 0
   controllerCharacteristics: 256
+  palm: {fileID: 0}

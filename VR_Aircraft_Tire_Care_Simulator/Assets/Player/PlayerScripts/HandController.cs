@@ -41,17 +41,25 @@ public class HandController : MonoBehaviour
         {
             handInput = devices[0];
         }
-        handModel = Instantiate(handModelPrefab, transform);
-        if (handModel)
+        //spawn hand model
+        if (handModel == null)
         {
-            handAnimator = handModel.GetComponent<Animator>();
-            isShowHand = true;
+            handModel = Instantiate(handModelPrefab, transform);
         }
+        handAnimator = handModel.GetComponent<Animator>();
+        isShowHand = true;
 
-        //set input for action
-        controller.selectAction.action.started += Grab;
-        controller.selectAction.action.canceled += Drop;
-
+        //Find controller
+        String s = controllerCharacteristics.ToString();
+        if(s == "Left")
+        {
+            controller = GameObject.FindGameObjectWithTag("LeftHandController").GetComponent<ActionBasedController>();
+        }
+        if(s == "Right")
+        {
+            controller = GameObject.FindGameObjectWithTag("RightHandController").GetComponent<ActionBasedController>();
+        }
+        
         //set rigibody
         followControllerTrans = controller.gameObject.transform;
         rigi = GetComponent<Rigidbody>();
@@ -59,11 +67,17 @@ public class HandController : MonoBehaviour
         rigi.mass = 20;
         rigi.maxAngularVelocity = 20f;
         rigi.interpolation = RigidbodyInterpolation.Interpolate;
+        //teleport hand to controller
         rigi.position = followControllerTrans.position;
         rigi.rotation = followControllerTrans.rotation;
+        handModel.transform.position = this.transform.position;
 
         //find palm point
-        palm = handModel.transform.GetChild(2);
+        palm = handModel.transform.GetChild(2).transform;
+
+        //set input for action
+        controller.selectAction.action.started += Grab;
+        controller.selectAction.action.canceled += Drop;
     }
 
     // Update is called once per frame
@@ -73,7 +87,10 @@ public class HandController : MonoBehaviour
         {
             UpdateAnimation();
         }
-
+        if(controller == null)
+        {
+            Start();
+        }
         FollowController();
         
         //handInput.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryValue);
@@ -101,6 +118,7 @@ public class HandController : MonoBehaviour
     {
         if (isGrabbing && objGrabbing) return;
 
+        //ResetPalm();
         Collider[] objGrabbingCollider = Physics.OverlapSphere(palm.position, jointDistance, grabableLayer);
         if (objGrabbingCollider.Length < 1) return;
 
@@ -146,9 +164,18 @@ public class HandController : MonoBehaviour
             objGrabRigi.interpolation = RigidbodyInterpolation.None;
             objGrabbing = null;
         }
-        followControllerTrans = controller.gameObject.transform;
+        if(controller != null)
+        {
+            followControllerTrans = controller.gameObject.transform;
+        }
         isGrabbing = false;
     }
+
+   /* private void ResetPalm()
+    {
+        palm = null;
+        palm = handModel.transform.GetChild(2).transform;
+    }*/
 
     void UpdateAnimation()
     {
@@ -227,8 +254,10 @@ public class HandController : MonoBehaviour
             jointObjToHand.enablePreprocessing = false;
 
         }
-
         //follow controller
-        followControllerTrans = controller.gameObject.transform;
+        if (controller != null)
+        {
+            followControllerTrans = controller.gameObject.transform;
+        }
     }
 }
