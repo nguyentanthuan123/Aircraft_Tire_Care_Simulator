@@ -10,10 +10,12 @@ public class HandController : MonoBehaviour
     //public XRNode inputSource;
     public ActionBasedController controller;
     public GameObject handModelPrefab;
+    public Material hightLightMaterial;
     public LayerMask grabableLayer;
     public float followSpeed;
     public float rotateSpeed;
     public float jointDistance;
+    public float getObjDistance;
     public bool isShowHand;
     public InputDeviceCharacteristics controllerCharacteristics;
 
@@ -21,13 +23,17 @@ public class HandController : MonoBehaviour
     private Transform followControllerTrans;
     private GameObject handModel;
     private GameObject objGrabbing;
+    private GameObject objSelected;
     private FixedJoint jointHandToObj, jointObjToHand;
     private Rigidbody rigi;
     private Transform grabPoint;
     //bool isPressed;
     private InputDevice handInput;
     private bool isGrabbing;
+    private bool isSelected;
+    private string objSelectedName;
     [SerializeField] private Transform palm;
+    [SerializeField] private Camera mainCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +54,12 @@ public class HandController : MonoBehaviour
         }
         handAnimator = handModel.GetComponent<Animator>();
         isShowHand = true;
+
+        //Find camera for raycast
+        if(mainCam == null)
+        {
+            mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        }
 
         //Find controller
         String s = controllerCharacteristics.ToString();
@@ -78,6 +90,8 @@ public class HandController : MonoBehaviour
         //set input for action
         controller.selectAction.action.started += Grab;
         controller.selectAction.action.canceled += Drop;
+        controller.activateAction.action.started += GrabByRaycast;
+        controller.activateAction.action.canceled += Drop;
     }
 
     // Update is called once per frame
@@ -91,8 +105,21 @@ public class HandController : MonoBehaviour
         {
             Start();
         }
+
         FollowController();
-        
+
+        HightlightObj();
+
+
+        //Get obj by raycast
+       /* if(objGrabbing == null)
+        {
+            handInput.TryGetFeatureValue(CommonUsages.triggerButton, out bool pressed);
+            if (pressed)
+            {
+                GrabByRaycast();
+            }
+        }*/
         //handInput.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryValue);
         /*if (primaryValue && isPressed == false)
         {
@@ -102,6 +129,70 @@ public class HandController : MonoBehaviour
         {
             isPressed = false;
         }*/
+    }
+
+    private void HightlightObj()
+    {
+        //if (objGrabbing && isGrabbing) return;
+        RaycastHit hit;
+        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, getObjDistance))
+        {
+            if (hit.transform.gameObject.layer == 6)
+            {
+                if (!isSelected)
+                {
+                    ResetSelectedObj();
+                    changeMaterial(hit);
+                }
+                else if(objSelectedName!= null)
+                {
+                    if(objSelectedName != hit.transform.gameObject.name)
+                    {
+                        ResetSelectedObj();
+                        changeMaterial(hit);
+                    }
+                }
+            }
+            else
+            {
+                ResetSelectedObj();
+                isSelected = false;
+            }
+        }
+    }
+    private void changeMaterial(RaycastHit hit)
+    {
+        objSelected = hit.transform.gameObject;
+        objSelectedName = hit.transform.gameObject.name;
+        hit.transform.GetComponent<HightLightSelected>().isChanged = true;
+        hit.transform.GetComponent<Renderer>().material = hightLightMaterial;
+        isSelected = true;
+    }
+
+    private void ResetSelectedObj()
+    {
+        if(objSelected != null)
+        {
+            objSelected.transform.GetComponent<HightLightSelected>().isHightLight = false;
+            objSelected.transform.GetComponent<HightLightSelected>().isChanged = false;
+            objSelected = null;
+        }
+    }
+
+    private void GrabByRaycast(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (objGrabbing && isGrabbing) return;
+        RaycastHit hit;
+        if(Physics.Raycast(mainCam.transform.position,mainCam.transform.forward,out hit, getObjDistance))
+        {
+            if(hit.transform.gameObject.layer == 6)
+            {
+                hit.transform.position = this.transform.position;
+                var hitRigi = hit.collider.GetComponent<Rigidbody>();
+                objGrabbing = hit.transform.gameObject;
+                StartCoroutine(AddJoint(hit.collider,hitRigi));
+            }
+        }
     }
 
     private void FollowController()
@@ -114,7 +205,7 @@ public class HandController : MonoBehaviour
         quaternion.ToAngleAxis(out float angle, out Vector3 axis);
         rigi.angularVelocity = axis * (angle * Mathf.Deg2Rad * rotateSpeed);
     }
-    void Grab(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    private void Grab(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         if (isGrabbing && objGrabbing) return;
 
@@ -140,9 +231,10 @@ public class HandController : MonoBehaviour
         {
             objGrabbing = targetRigi.gameObject;
         }
+
         StartCoroutine(AddJoint(objGrabbingCollider[0],targetRigi));
     }
-    void Drop(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    private void Drop(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         
         if(jointHandToObj != null)
@@ -177,7 +269,7 @@ public class HandController : MonoBehaviour
         palm = handModel.transform.GetChild(2).transform;
     }*/
 
-    void UpdateAnimation()
+    private void UpdateAnimation()
     {
         //handInput = InputDevices.GetDeviceAtXRNode(inputSource);
         if (handInput.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
@@ -242,6 +334,7 @@ public class HandController : MonoBehaviour
         //Add joint to objGrab
         if(objGrabbing!= null)
         {
+            
             jointObjToHand = objGrabbing.AddComponent<FixedJoint>();
             jointObjToHand.connectedBody = rigi;
             jointObjToHand.breakForce = float.PositiveInfinity;

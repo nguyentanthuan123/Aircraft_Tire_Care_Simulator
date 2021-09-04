@@ -85,12 +85,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
       propertyPath: jointDistance
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
       propertyPath: reachDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
+      propertyPath: getObjDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
+      propertyPath: defauftMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a0de8f57df232741b9d46000728a76f, type: 2}
+    - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
+      propertyPath: hightLightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: f87f5469b5587f74d913f17d833b1c80, type: 2}
     - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
       propertyPath: followControllerObj
       value: 
@@ -180,12 +192,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5583840065662661692, guid: 04681f0bd47020a4388c4d98bd9582de, type: 3}
       propertyPath: jointDistance
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -5583840065662661692, guid: 04681f0bd47020a4388c4d98bd9582de, type: 3}
       propertyPath: reachDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -5583840065662661692, guid: 04681f0bd47020a4388c4d98bd9582de, type: 3}
+      propertyPath: getObjDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -5583840065662661692, guid: 04681f0bd47020a4388c4d98bd9582de, type: 3}
+      propertyPath: defauftMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a0de8f57df232741b9d46000728a76f, type: 2}
+    - target: {fileID: -5583840065662661692, guid: 04681f0bd47020a4388c4d98bd9582de, type: 3}
+      propertyPath: hightLightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: f87f5469b5587f74d913f17d833b1c80, type: 2}
     - target: {fileID: -5583840065662661692, guid: 04681f0bd47020a4388c4d98bd9582de, type: 3}
       propertyPath: followControllerObj
       value: 
