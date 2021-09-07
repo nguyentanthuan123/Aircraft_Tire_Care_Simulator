@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour
+public class LevelController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,11 +19,11 @@ public class ChangeScene : MonoBehaviour
 
     public void GoToNLG()
     {
-        SceneManager.LoadScene("Parking");
+        SceneManager.LoadScene("Parking 2");
     }
 
     public void GoToCockpit()
     {
-        SceneManager.LoadScene("Cockpit");
+        SceneManager.LoadScene("Cockpit 2");
     }
 }
