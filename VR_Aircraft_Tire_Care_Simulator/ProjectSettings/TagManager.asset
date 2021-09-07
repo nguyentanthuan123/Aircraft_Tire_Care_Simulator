@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< Updated upstream
   tags: []
+=======
+  tags:
+  - LeftHandController
+  - RightHandController
+  - attach
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
