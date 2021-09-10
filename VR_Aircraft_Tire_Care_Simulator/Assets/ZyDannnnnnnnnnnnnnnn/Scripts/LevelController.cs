@@ -26,4 +26,9 @@ public class LevelController : MonoBehaviour
     {
         SceneManager.LoadScene("Cockpit 2");
     }
+
+    public void GoToWorkShop()
+    {
+        SceneManager.LoadScene("Workshop");
+    }
 }

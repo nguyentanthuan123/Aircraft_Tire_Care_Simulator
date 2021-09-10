@@ -287,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1508697208234375941, guid: 9e39507da4bb1404490b354cb6211463, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1508697208234375941, guid: 9e39507da4bb1404490b354cb6211463, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1236,7 +1236,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6239724927743686371, guid: 019d5d1b6c75e0f4695b65f9b85c9319, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6239724927743686371, guid: 019d5d1b6c75e0f4695b65f9b85c9319, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1306,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5727006506672918188, guid: b899f4ce167bf2f4d809ee317394a9d7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5727006506672918188, guid: b899f4ce167bf2f4d809ee317394a9d7, type: 3}
       propertyPath: m_LocalScale.x
@@ -1458,7 +1458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1200525250
 GameObject:
@@ -1505,8 +1505,6 @@ MonoBehaviour:
   Zone: {fileID: 5057620593818009895}
   Tag: {fileID: 8600115823070122660}
   distanceCheck: 0.2
-  Note: {fileID: 0}
-  attachTransform: {fileID: 0}
 --- !u!1001 &1434434397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1520,7 +1518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7342056038234989847, guid: ca0a4794f99b6cd46b137c56ceeae306, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7342056038234989847, guid: ca0a4794f99b6cd46b137c56ceeae306, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1596,7 +1594,7 @@ RectTransform:
   m_Children:
   - {fileID: 299800455}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1916,8 +1914,6 @@ MonoBehaviour:
   Zone: {fileID: 5057620594273678251}
   Tag: {fileID: 8600115824259209984}
   distanceCheck: 0.2
-  Note: {fileID: 0}
-  attachTransform: {fileID: 0}
 --- !u!1 &1669854851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1727317276203295122, guid: b899f4ce167bf2f4d809ee317394a9d7, type: 3}
@@ -1952,8 +1948,6 @@ MonoBehaviour:
   Zone: {fileID: 153478043414510686}
   Tag: {fileID: 1669854851}
   distanceCheck: 0.2
-  Note: {fileID: 0}
-  attachTransform: {fileID: 0}
 --- !u!1 &1693283393
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,7 +3051,7 @@ Transform:
   - {fileID: 153478043301646981}
   - {fileID: 153478043730390544}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &153478043414510690
 MeshRenderer:
@@ -4831,7 +4825,7 @@ Transform:
   - {fileID: 531052872200118302}
   - {fileID: 3393346703530469060}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &543450652795347266
 Transform:
@@ -4852,7 +4846,7 @@ Transform:
   - {fileID: 1954717603}
   - {fileID: 8691687503659866709}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &547282166154993860
 MeshFilter:
@@ -13971,7 +13965,7 @@ Transform:
   - {fileID: 8980439436974207218}
   - {fileID: 8980439435277058686}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2851465249656913330
 GameObject:
@@ -37473,8 +37467,6 @@ MonoBehaviour:
   Zone: {fileID: 5057620594766614930}
   Tag: {fileID: 8600115823429516094}
   distanceCheck: 0.2
-  Note: {fileID: 0}
-  attachTransform: {fileID: 0}
 --- !u!1 &8600115823664529450
 GameObject:
   m_ObjectHideFlags: 0
@@ -37509,8 +37501,6 @@ MonoBehaviour:
   Zone: {fileID: 730673444199995415}
   Tag: {fileID: 8600115823664529450}
   distanceCheck: 0.2
-  Note: {fileID: 0}
-  attachTransform: {fileID: 0}
 --- !u!1 &8600115824259209984
 GameObject:
   m_ObjectHideFlags: 0
@@ -39297,7 +39287,7 @@ Transform:
   - {fileID: 8940330711609493534}
   - {fileID: 8940330712525947322}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9039588602653268739
 GameObject:
