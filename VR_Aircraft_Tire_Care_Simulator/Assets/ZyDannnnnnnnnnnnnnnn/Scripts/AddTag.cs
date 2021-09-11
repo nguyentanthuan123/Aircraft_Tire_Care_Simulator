@@ -59,9 +59,9 @@ public class AddTag : MonoBehaviour
         {
             Tag.transform.position = attachTransform.transform.position;
             Tag.transform.rotation = attachTransform.transform.rotation;
-            rigid.constraints = RigidbodyConstraints.FreezeAll;
-            Zone.GetComponent<MeshRenderer>().enabled = false;
+            rigid.constraints = RigidbodyConstraints.FreezeAll;     
         }
+        Zone.GetComponent<MeshRenderer>().enabled = false;
         Note.SetActive(false);
     }
 }
