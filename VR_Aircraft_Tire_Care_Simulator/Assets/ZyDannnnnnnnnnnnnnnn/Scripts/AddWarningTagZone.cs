@@ -13,7 +13,7 @@ public class AddWarningTagZone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        note = GameObject.Find("Warning Notice");
+        note = GameObject.Find("Note Warning");
         
     }
 

@@ -162,9 +162,12 @@ public class HandController : MonoBehaviour
     }
     private void changeMaterial(RaycastHit hit)
     {
+        var hightlightCompoment = hit.transform.GetComponent<HightLightSelected>();
+        if (!hightlightCompoment) return;
+
         objSelected = hit.transform.gameObject;
         objSelectedName = hit.transform.gameObject.name;
-        hit.transform.GetComponent<HightLightSelected>().isChanged = true;
+        hightlightCompoment.isChanged = true;
         hit.transform.GetComponent<Renderer>().material = hightLightMaterial;
         isSelected = true;
     }
