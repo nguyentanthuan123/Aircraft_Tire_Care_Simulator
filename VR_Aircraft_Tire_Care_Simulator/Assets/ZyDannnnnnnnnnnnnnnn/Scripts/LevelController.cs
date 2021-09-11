@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
+    public GameObject toolsBoxPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +26,13 @@ public class LevelController : MonoBehaviour
     public void GoToCockpit()
     {
         SceneManager.LoadScene("Cockpit 2");
+    }
+    public void OpenToolsBox()
+    {
+        toolsBoxPanel.SetActive(true);
+    }
+    public void CloseToolsBox()
+    {
+        toolsBoxPanel.SetActive(false);
     }
 }
