@@ -187,9 +187,10 @@ public class HandController : MonoBehaviour
         {
             if(hit.transform.gameObject.layer == 6)
             {
-                hit.transform.position = this.transform.position;
                 var hitRigi = hit.collider.GetComponent<Rigidbody>();
+                if (!hitRigi) return;
                 objGrabbing = hit.transform.gameObject;
+                hit.transform.position = this.transform.position;
                 StartCoroutine(AddJoint(hit.collider,hitRigi));
             }
         }
