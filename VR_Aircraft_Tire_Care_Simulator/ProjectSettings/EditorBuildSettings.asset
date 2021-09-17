@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/ZyDannnnnnnnnnnnnnnn/Scenes/Parking 2.unity
     guid: 9fd969527d2c11741868898cd4438439
   - enabled: 1
-    path: Assets/ZyDannnnnnnnnnnnnnnn/Scenes/Workshop.unity
-    guid: 1d2f902e4c69611438a4e0c21a4c86ca
+    path: Assets/ZyDannnnnnnnnnnnnnnn/Scenes/Workshop 2.unity
+    guid: 507d3142179cc504a906db3f23383ae0
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3bcbf6d8eae8238489175d8e8646ea3f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 79abaa44bf10e3d48955030b37a67c89, type: 2}
