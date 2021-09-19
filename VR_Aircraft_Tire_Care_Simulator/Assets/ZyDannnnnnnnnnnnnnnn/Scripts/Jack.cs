@@ -13,14 +13,12 @@ public class Jack : MonoBehaviour
     private float initialAngle;
     private float currentAngle;
     private float distanceTravelled = 0;
-    private Vector3 lastPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         Vector3 direction = body.position - handle.position;
         initialAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        lastPosition = cylinder1.position;
     }
 
     // Update is called once per frame
@@ -29,8 +27,9 @@ public class Jack : MonoBehaviour
         Vector3 direction = body.position - handle.position;
         currentAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        distanceTravelled += Vector3.Distance(new Vector3(0, cylinder1.position.y, 0), new Vector3(0, lastPosition.y, 0));
-        lastPosition = cylinder1.position;
+        distanceTravelled = Vector3.Distance(new Vector3(0, body.position.y, 0), new Vector3(0, dome.position.y, 0));
+        
+        Debug.Log(distanceTravelled);
         if (placeJack())
         {
             moveCylinder();
@@ -54,8 +53,8 @@ public class Jack : MonoBehaviour
         if(distanceCheck <= 0.17f)
         {
             cylinder1.parent.Translate(direction.x *Time.deltaTime, 0 , direction.z *Time.deltaTime);
-            body.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            
+            body.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
+
             return true;
         }
         return false;
@@ -63,6 +62,7 @@ public class Jack : MonoBehaviour
 
     void moveCylinder()
     {
+        
         if (initialAngle - currentAngle > 1 && currentAngle != initialAngle)
         {
             if (distanceTravelled < 0.2f)
@@ -70,7 +70,7 @@ public class Jack : MonoBehaviour
                 cylinder1.position = new Vector3(cylinder1.position.x, cylinder1.position.y + 0.03f * Time.deltaTime, cylinder1.position.z);
                 initialAngle = currentAngle;
             }
-            if (distanceTravelled >= 0.2f && distanceTravelled < 0.4f)
+            if (distanceTravelled >= 0.2f && distanceTravelled < 0.35f)
             {
                 cylinder2.position = new Vector3(cylinder2.position.x, cylinder2.position.y + 0.03f * Time.deltaTime, cylinder2.position.z);
                 cylinder1.position = new Vector3(cylinder1.position.x, cylinder1.position.y + 0.03f * Time.deltaTime, cylinder1.position.z);
