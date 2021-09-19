@@ -45,8 +45,6 @@ public class AddTag : MonoBehaviour
             isAttached = false;
         }
         
-        
-
     }
 
     private void OnTriggerEnter(Collider other)
