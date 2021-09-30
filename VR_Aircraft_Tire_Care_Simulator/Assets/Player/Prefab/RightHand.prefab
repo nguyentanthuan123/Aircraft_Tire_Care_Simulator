@@ -45,12 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   handModelPrefab: {fileID: 1852225517301976430, guid: d193abe8794c83448beb895bb30edfda, type: 3}
+  hightLightMaterial: {fileID: 0}
   grabableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  hookLayer:
+    serializedVersion: 2
+    m_Bits: 256
   followSpeed: 0
   rotateSpeed: 0
   jointDistance: 0
+  getObjDistance: 0
   isShowHand: 0
   controllerCharacteristics: 512
   palm: {fileID: 0}
+  mainCam: {fileID: 0}

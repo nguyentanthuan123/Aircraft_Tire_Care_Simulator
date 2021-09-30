@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftHandController
   - RightHandController
+  - UseToolPoint
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - Water
   - UI
   - Grabable
-  - 
-  - 
-  - 
-  - 
+  - ToolsBox
+  - Hookable
+  - UseTool
+  - UseToolPoint
   - 
   - 
   - 

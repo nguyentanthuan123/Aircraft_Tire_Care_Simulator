@@ -12,6 +12,7 @@ public class HandController : MonoBehaviour
     public GameObject handModelPrefab;
     public Material hightLightMaterial;
     public LayerMask grabableLayer;
+    public LayerMask hookLayer;
     public float followSpeed;
     public float rotateSpeed;
     public float jointDistance;
@@ -29,14 +30,20 @@ public class HandController : MonoBehaviour
     private Transform grabPoint;
     //bool isPressed;
     private InputDevice handInput;
+    private float twistingDelay;
+    private bool isTwistable;
     private bool isGrabbing;
     private bool isSelected;
+    private bool isUsingTool;
+    private bool isTwistedOut = false;
     private string objSelectedName;
     [SerializeField] private Transform palm;
     [SerializeField] private Camera mainCam;
     // Start is called before the first frame update
     void Start()
     {
+        isUsingTool = false;
+        isTwistable = true;
         isGrabbing = false;
         isShowHand = false;
         //isPressed = false;
@@ -88,7 +95,10 @@ public class HandController : MonoBehaviour
         palm = handModel.transform.GetChild(2).transform;
 
         //set input for action
+        controller.hapticDeviceAction.action.started += TwistBtnInput;
+        controller.hapticDeviceAction.action.started += UseTool;
         controller.selectAction.action.started += Grab;
+        controller.selectAction.action.started += HookHand;
         controller.selectAction.action.canceled += Drop;
         controller.activateAction.action.started += GrabByRaycast;
         controller.activateAction.action.canceled += Drop;
@@ -110,16 +120,6 @@ public class HandController : MonoBehaviour
 
         HightlightObj();
 
-
-        //Get obj by raycast
-       /* if(objGrabbing == null)
-        {
-            handInput.TryGetFeatureValue(CommonUsages.triggerButton, out bool pressed);
-            if (pressed)
-            {
-                GrabByRaycast();
-            }
-        }*/
         //handInput.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryValue);
         /*if (primaryValue && isPressed == false)
         {
@@ -130,7 +130,78 @@ public class HandController : MonoBehaviour
             isPressed = false;
         }*/
     }
+    private void TwistBtnInput(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (!isTwistable) return;
 
+        if (objGrabbing == null) return;
+
+        var twistScript = objGrabbing.GetComponent<TwistObj>();
+        if (!twistScript) return;
+
+        twistingDelay = twistScript.delayTwistTime;
+
+        twistScript.GettingTwistIn();
+        twistScript.GettingTwistOut();
+
+        if(twistScript.isFinishedTwistOut && twistScript.twistRealtime<=0)
+        {
+            if (!isTwistedOut)
+            {
+                rigi.freezeRotation = false;
+                if (controller != null)
+                {
+                    followControllerTrans = controller.transform;
+                }
+                isTwistedOut = true;
+            }
+            else
+            {
+                twistScript.MoveToPlacement();
+                isTwistedOut = false;
+            }
+        }
+        StartCoroutine(TwistObjDelay());
+    }
+    IEnumerator TwistObjDelay()
+    {
+        isTwistable = false;
+        yield return new WaitForSeconds(twistingDelay);
+        isTwistable = true;
+    }
+    private void HookHand(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (isGrabbing) return;
+
+        Collider[] hookCollider = Physics.OverlapSphere(palm.position, jointDistance, hookLayer);
+        if (hookCollider.Length < 1) return;
+
+        objGrabbing = hookCollider[0].transform.gameObject;
+        var hookRigi = objGrabbing.GetComponent<Rigidbody>();
+        StartCoroutine(AddJoint(hookCollider[0], hookRigi));
+
+        rigi.freezeRotation = true;
+        followControllerTrans = null;
+    }
+    private void UseTool(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (!isGrabbing) return;
+
+        var toolScript = objGrabbing.GetComponent<UtimateTool>();
+        if (!toolScript) return;
+
+        if (!isUsingTool)
+        {
+            toolScript.ActivateTool();
+            isUsingTool = true;
+        }
+        else
+        {
+            toolScript.DeactivateTool();
+            isUsingTool = false;
+        }
+        
+    }
     private void HightlightObj()
     {
         //if (objGrabbing && isGrabbing) return;
@@ -201,6 +272,8 @@ public class HandController : MonoBehaviour
 
     private void FollowController()
     {
+        if (followControllerTrans == null) return;
+
         //follow position;
         var distance = Vector3.Distance(transform.position, followControllerTrans.position);
         rigi.velocity = (followControllerTrans.position - transform.position).normalized * (followSpeed * distance);
@@ -240,7 +313,7 @@ public class HandController : MonoBehaviour
     }
     private void Drop(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        
+        rigi.freezeRotation = false;
         if(jointHandToObj != null)
         {
             Destroy(jointHandToObj);

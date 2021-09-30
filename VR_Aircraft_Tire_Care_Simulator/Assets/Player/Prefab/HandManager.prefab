@@ -100,6 +100,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 4a0de8f57df232741b9d46000728a76f, type: 2}
     - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
+      propertyPath: hookLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
       propertyPath: hightLightMaterial
       value: 
       objectReference: {fileID: 2100000, guid: f87f5469b5587f74d913f17d833b1c80, type: 2}

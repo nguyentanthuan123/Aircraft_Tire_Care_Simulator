@@ -22,11 +22,16 @@ public class ToolsBox : MonoBehaviour
     public List<Tool> tools;
     public GameObject toolSlot;
     public GameObject toolsGrid;
-    private Dictionary<string, GameObject> poolDictionary;
+    public GameObject toolsListPanel;
+    public GameObject boxhandle1;
+    public GameObject boxhandle2;
     public Transform showToolPoint;
+    private Dictionary<string, GameObject> poolDictionary;
+    private Animator boxAnim;
     // Start is called before the first frame update
     void Start()
     {
+        boxAnim = GetComponent<Animator>();
         poolDictionary = new Dictionary<string, GameObject>();
         foreach( Tool tool in tools)
         {
@@ -50,5 +55,25 @@ public class ToolsBox : MonoBehaviour
                 obj.transform.rotation = showToolPoint.rotation;
             }
         }
+    }
+    public void OpenToolsBoxBtn()
+    {
+        boxAnim.SetBool("IsOpen",true);
+        boxhandle1.SetActive(false);
+        boxhandle2.SetActive(false);
+    }
+    public void CloseToolsBoxBtn()
+    {
+        boxAnim.SetBool("IsOpen", false);
+        toolsListPanel.SetActive(false);
+    }
+    public void OpenToolsListPanel()
+    {
+        toolsListPanel.SetActive(true);
+    }
+    public void ActiveHandle()
+    {
+        boxhandle1.SetActive(true);
+        boxhandle2.SetActive(true);
     }
 }
