@@ -6,6 +6,9 @@ TagManager:
   tags:
   - LeftHandController
   - RightHandController
+  - crack
+  - Smooth
+  - SpawnPosition
   layers:
   - Default
   - TransparentFX

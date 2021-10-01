@@ -35,6 +35,7 @@ public class Jack : MonoBehaviour
             moveCylinder();
             ResetInitialAngel();
         }
+
     }
 
     void ResetInitialAngel()
@@ -52,7 +53,7 @@ public class Jack : MonoBehaviour
         //Debug.Log(distanceCheck);
         if(distanceCheck <= 0.17f)
         {
-            cylinder1.parent.Translate(direction.x *Time.deltaTime, 0 , direction.z *Time.deltaTime);
+            cylinder1.parent.Translate(direction.x * Time.deltaTime, 0, direction.z * Time.deltaTime);
             body.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
 
             return true;
@@ -63,7 +64,7 @@ public class Jack : MonoBehaviour
     void moveCylinder()
     {
         
-        if (initialAngle - currentAngle > 1 && currentAngle != initialAngle)
+        if (initialAngle - currentAngle > 1)
         {
             if (distanceTravelled < 0.2f)
             {
