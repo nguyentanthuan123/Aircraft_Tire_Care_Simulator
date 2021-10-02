@@ -9,6 +9,7 @@ TagManager:
   - crack
   - Smooth
   - SpawnPosition
+  - CanBeRotate
   layers:
   - Default
   - TransparentFX

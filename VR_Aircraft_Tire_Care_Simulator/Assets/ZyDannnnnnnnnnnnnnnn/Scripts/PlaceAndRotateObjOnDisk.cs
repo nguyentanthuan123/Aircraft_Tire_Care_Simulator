@@ -36,11 +36,12 @@ public class PlaceAndRotateObjOnDisk : MonoBehaviour
                 //Debug.Log(hitInfo.collider.name);
                 obj = hitInfo.collider.transform.parent.gameObject;
                 rb = obj.GetComponent<Rigidbody>();
-                direction = target.transform.position - obj.transform.position;
+                direction = target.transform.position - obj.transform.position;               
             } 
         }
 
         rotateSpeed = this.GetComponentInParent<AutoRotateDisk>().speed;
+        FreezeObj();
     }
 
     private void FixedUpdate()
@@ -62,5 +63,17 @@ public class PlaceAndRotateObjOnDisk : MonoBehaviour
     {
         Quaternion rotation = Quaternion.Euler(new Vector3(0, rotateSpeed, 0));
         rb.MoveRotation(rotation * rb.rotation);
+    }
+
+    public void FreezeObj()
+    {
+        if (rotateSpeed > 0f)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.None;
+        }
     }
 }

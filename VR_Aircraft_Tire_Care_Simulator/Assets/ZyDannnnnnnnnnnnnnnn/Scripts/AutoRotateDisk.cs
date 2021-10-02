@@ -9,6 +9,7 @@ public class AutoRotateDisk : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
     private bool toggle;
+    private Component otherGO;
     
     // Start is called before the first frame update
     void Start()
