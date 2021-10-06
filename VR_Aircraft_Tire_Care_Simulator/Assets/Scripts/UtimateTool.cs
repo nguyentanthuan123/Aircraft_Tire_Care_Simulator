@@ -191,11 +191,13 @@ public class UtimateTool : MonoBehaviour
                 {
                     if (sideValue == 1) 
                     { 
-                        twistObjScript.GettingTwistIn(); 
+                        twistObjScript.GettingTwistIn();
+                        if (twistObjScript.isFinishedTwistIn) return;
                     }
                     else
                     {
                         twistObjScript.GettingTwistOut();
+                        if (twistObjScript.isFinishedTwistOut) return;
                     }
                 }
                 else
@@ -203,10 +205,12 @@ public class UtimateTool : MonoBehaviour
                     if (sideValue == 0)
                     {
                         twistObjScript.GettingTwistIn();
+                        if (twistObjScript.isFinishedTwistIn) return;
                     }
                     else
                     {
                         twistObjScript.GettingTwistOut();
+                        if (twistObjScript.isFinishedTwistOut) return;
                     }
                 }
                 isTwistTarget = false;

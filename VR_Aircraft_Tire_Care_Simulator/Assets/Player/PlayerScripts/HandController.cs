@@ -28,6 +28,7 @@ public class HandController : MonoBehaviour
     private FixedJoint jointHandToObj, jointObjToHand;
     private Rigidbody rigi;
     private Transform grabPoint;
+    private Collider handCollider;
     //bool isPressed;
     private InputDevice handInput;
     private float twistingDelay;
@@ -93,6 +94,12 @@ public class HandController : MonoBehaviour
 
         //find palm point
         palm = handModel.transform.GetChild(2).transform;
+
+        handCollider = handModel.GetComponent<Collider>();
+        if (!handCollider)
+        {
+            handCollider = handModel.GetComponentInChildren<Collider>();
+        }
 
         //set input for action
         controller.hapticDeviceAction.action.started += TwistBtnInput;
@@ -193,6 +200,8 @@ public class HandController : MonoBehaviour
         if (!isUsingTool)
         {
             toolScript.ActivateTool();
+            objGrabbing.GetComponent<Collider>().enabled = false;
+            handCollider.enabled = false;
             isUsingTool = true;
         }
         else
@@ -313,6 +322,7 @@ public class HandController : MonoBehaviour
     }
     private void Drop(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
+        handCollider.enabled = true;
         rigi.freezeRotation = false;
         if(jointHandToObj != null)
         {
@@ -331,6 +341,7 @@ public class HandController : MonoBehaviour
             var objGrabRigi = objGrabbing.GetComponent<Rigidbody>();
             objGrabRigi.collisionDetectionMode = CollisionDetectionMode.Discrete;
             objGrabRigi.interpolation = RigidbodyInterpolation.None;
+            objGrabbing.GetComponent<Collider>().enabled = true;
             objGrabbing = null;
         }
         if(controller != null)

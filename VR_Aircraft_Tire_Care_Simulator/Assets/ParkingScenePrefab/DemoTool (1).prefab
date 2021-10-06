@@ -147,8 +147,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   connectPoint: {fileID: 4851382572529570393}
-  localConnectPointPos: {x: 0, y: 0, z: 0}
-  connectDistance: 1
+  connectDistance: 0.1
   jointLimitMin: -45
   jointLimitMax: 45
   connectMass: 20

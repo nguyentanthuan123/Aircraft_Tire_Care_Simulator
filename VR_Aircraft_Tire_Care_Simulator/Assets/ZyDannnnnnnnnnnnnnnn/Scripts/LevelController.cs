@@ -29,6 +29,6 @@ public class LevelController : MonoBehaviour
 
     public void GoToWorkShop()
     {
-        SceneManager.LoadScene("Workshop");
+        SceneManager.LoadScene("Workshop 2");
     }
 }

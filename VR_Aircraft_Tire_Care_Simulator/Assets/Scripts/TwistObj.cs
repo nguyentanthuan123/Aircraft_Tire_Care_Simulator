@@ -6,13 +6,15 @@ public class TwistObj : MonoBehaviour
 {
     public enum GrownDirection { UpX, UpY, UpZ } // setting direction to twist out and in
     public GrownDirection grownDirection;
+    public enum RotateDirection { rX,rY,rZ}
+    public RotateDirection rotateDirection;
     public enum TwistDirection { Right, Left} // setting rotate dirction
     public TwistDirection twistDirection;
     public Transform placement;
     public int twistTime; // rotate lap
     public int layerNum, grabableLayerNum;
     public float delayTwistTime; // time delay per lap
-    public float gettingTwistOutValue; // grown value
+    public float gettingTwistValue; // grown value
     public float speedGrown; // speed when growning
     public float speedRotate; // speed when rotating
     public float placeDistance; // distance to placement
@@ -22,6 +24,7 @@ public class TwistObj : MonoBehaviour
     public int twistRealtime;
     private Rigidbody rigi;
     private float xPlus = 0, yPlus = 0, zPlus = 0;
+    private float xRotate = 0, yRotate = 0, zRotate = 0;
     private bool isTwistingIn = false, isTwistingOut = false;
     
     // Start is called before the first frame update
@@ -32,13 +35,19 @@ public class TwistObj : MonoBehaviour
 
         rigi = GetComponent<Rigidbody>();
 
-        if (grownDirection == GrownDirection.UpX) xPlus = gettingTwistOutValue;
+        if (grownDirection == GrownDirection.UpX) xPlus = gettingTwistValue;
 
-        if (grownDirection == GrownDirection.UpY) yPlus = gettingTwistOutValue;
+        if (grownDirection == GrownDirection.UpY) yPlus = gettingTwistValue;
 
-        if (grownDirection == GrownDirection.UpZ) zPlus = gettingTwistOutValue;
+        if (grownDirection == GrownDirection.UpZ) zPlus = gettingTwistValue;
 
-        if(placement!= null)
+        if (rotateDirection == RotateDirection.rX) xRotate = gettingTwistValue;
+
+        if (rotateDirection == RotateDirection.rY) yRotate = gettingTwistValue;
+
+        if (rotateDirection == RotateDirection.rZ) zRotate = gettingTwistValue;
+
+        if (placement!= null)
         {
             if (Vector3.Distance(transform.position, placement.position) <= placeDistance)
             {
@@ -134,13 +143,13 @@ public class TwistObj : MonoBehaviour
     }
     public void GoOut()
     {
-        this.transform.Rotate(-xPlus * speedRotate, -yPlus * speedRotate, -zPlus * speedRotate);
+        this.transform.Rotate(-xRotate * speedRotate, -yRotate * speedRotate, -zRotate * speedRotate);
         Vector3 startPos = transform.position;
         this.transform.position = Vector3.Lerp(startPos, new Vector3(startPos.x + xPlus, startPos.y + yPlus, startPos.z + zPlus),speedGrown* Time.deltaTime);
     }
     public void GoIn()
     {
-        this.transform.Rotate(xPlus * speedRotate, yPlus * speedRotate, zPlus * speedRotate);
+        this.transform.Rotate(xRotate * speedRotate, yRotate * speedRotate, zRotate * speedRotate);
         Vector3 startPos = transform.position;
         this.transform.position = Vector3.Lerp(startPos, new Vector3(startPos.x - xPlus, startPos.y - yPlus, startPos.z - zPlus), speedGrown * Time.deltaTime);
     }

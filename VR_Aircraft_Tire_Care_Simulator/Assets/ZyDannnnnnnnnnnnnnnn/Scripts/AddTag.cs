@@ -6,17 +6,19 @@ public class AddTag : MonoBehaviour
 {
     public GameObject Zone;
     public GameObject Tag;
-    public float distanceCheck = 0.2f;
+    public float distanceCheck = 0.05f;
 
     private float distance = 0;
     private GameObject Note;
     private Rigidbody rigid;
     private GameObject attachTransform;
+    private bool isAttached;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        isAttached = false;
         attachTransform = Zone.transform.Find("Attach Transform").gameObject;
         Note = Zone.transform.Find("Note Warning").gameObject;
         Note.SetActive(false);
@@ -28,39 +30,48 @@ public class AddTag : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(Zone.transform.position, Tag.transform.position);
+        if (distance < distanceCheck && !isAttached)
+        {
+            //Debug.Log("1");
+            Tag.transform.position = attachTransform.transform.position;
+            Tag.transform.rotation = attachTransform.transform.rotation;
+            rigid.constraints = RigidbodyConstraints.FreezeAll;
+
+            isAttached = true;
+        }
+        if(distance > distanceCheck)
+        {
+            rigid.constraints = RigidbodyConstraints.None;
+            isAttached = false;
+        }
         
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (rigid.constraints == RigidbodyConstraints.FreezeAll)
-        {
-            rigid.constraints = RigidbodyConstraints.None;
-            new WaitForSeconds(2);
-        }
-
         //Debug.Log("Hit");
         if (other.gameObject.tag.Equals("LeftHandController"))
         {
-            Note.SetActive(true);
-            Zone.GetComponent<MeshRenderer>().enabled = true;
+            if (!isAttached)
+            {
+                Note.SetActive(true);
+                Zone.GetComponent<MeshRenderer>().enabled = true;
+            }
+            
         }
 
         if (other.gameObject.tag.Equals("RightHandController"))
         {
-            Note.SetActive(true);
-            Zone.GetComponent<MeshRenderer>().enabled = true;
+            if(!isAttached)
+            {
+                Note.SetActive(true);
+                Zone.GetComponent<MeshRenderer>().enabled = true;
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (distance < distanceCheck && rigid.constraints == RigidbodyConstraints.None)
-        {
-            Tag.transform.position = attachTransform.transform.position;
-            Tag.transform.rotation = attachTransform.transform.rotation;
-            rigid.constraints = RigidbodyConstraints.FreezeAll;     
-        }
         Zone.GetComponent<MeshRenderer>().enabled = false;
         Note.SetActive(false);
     }
