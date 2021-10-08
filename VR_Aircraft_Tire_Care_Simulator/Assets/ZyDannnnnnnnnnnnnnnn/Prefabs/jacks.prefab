@@ -544,7 +544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4295364496339655549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.001, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6835688605242400133}
@@ -580,7 +580,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 16
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &4295364496339655551
 CapsuleCollider:
@@ -593,9 +593,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.021645557
-  m_Height: 0.18640915
+  m_Height: 0.16049728
   m_Direction: 2
-  m_Center: {x: -0.03017807, y: -0.02889428, z: 0.0026603788}
+  m_Center: {x: -0.030178066, y: -0.02889428, z: -0.00033152453}
 --- !u!1 &4814452709598329099
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +946,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0d8aa8eb1b226744b3c2247991b5e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  dis: 0.0867
   body: {fileID: 869673015303604162}
   handle: {fileID: 7223751045708487506}
   cylinder1: {fileID: 7161235441223441284}
@@ -1329,7 +1333,7 @@ MeshCollider:
   m_GameObject: {fileID: 7565628031287129473}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -1800,7 +1804,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9165764391593842016}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1821,15 +1825,15 @@ HingeJoint:
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 0
   m_ConnectedAnchor: {x: -0.0140648745, y: 0.0572986, z: 0.0006130934}
-  m_UseSpring: 0
+  m_UseSpring: 1
   m_Spring:
-    spring: 100
-    damper: 10
+    spring: 0
+    damper: 100
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
-    force: 100
+    force: 1000
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
@@ -1842,7 +1846,7 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
-  m_MassScale: 1
+  m_MassScale: 10
   m_ConnectedMassScale: 1
 --- !u!1001 &7223751046753306832
 PrefabInstance:

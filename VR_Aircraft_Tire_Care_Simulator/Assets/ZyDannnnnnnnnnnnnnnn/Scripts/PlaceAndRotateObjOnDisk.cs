@@ -10,9 +10,11 @@ public class PlaceAndRotateObjOnDisk : MonoBehaviour
     private GameObject obj;
     private Rigidbody rb;
     private Vector3 direction;
-    [SerializeField]
-    private float moveObjSpeed;
+    [SerializeField] private float moveObjSpeed;
+    [SerializeField] private float disCheck;
     private float rotateSpeed;
+    private bool objHasMoved;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +30,9 @@ public class PlaceAndRotateObjOnDisk : MonoBehaviour
         Ray ray = new Ray(this.transform.position, this.transform.up);
         Debug.DrawRay(this.transform.position, this.transform.up, Color.black);
 
-        if (Physics.Raycast(ray, out hitInfo,0.1f))
+        if (Physics.Raycast(ray, out hitInfo,disCheck))
         {
-            Debug.Log(hitInfo.collider.gameObject.name);
+            //Debug.Log(hitInfo.collider.gameObject.name);
             if (hitInfo.collider.gameObject != null)
             {
                 //Debug.Log(hitInfo.collider.name);
@@ -41,22 +43,25 @@ public class PlaceAndRotateObjOnDisk : MonoBehaviour
         }
 
         rotateSpeed = this.GetComponentInParent<AutoRotateDisk>().speed;
-        FreezeObj();
     }
 
     private void FixedUpdate()
     {
-        if(obj != null)
+        MoveObj(direction);
+        if (direction.magnitude < 0.076f && obj != null)
         {
-            MoveObj(direction);
             RotateObj();
+            FreezeObj();
         }
     }
 
     private void MoveObj(Vector3 direction)
     {
-        direction = new Vector3(direction.x, 0, direction.z);
-        rb.velocity = direction * moveObjSpeed * Time.deltaTime;
+        if (obj != null && obj.transform.up.y == 1f && rotateSpeed == 0f)
+        {
+            direction = new Vector3(direction.x, 0, direction.z);
+            rb.velocity = direction * moveObjSpeed * Time.fixedDeltaTime;
+        }
     }
 
     private void RotateObj()
@@ -67,7 +72,7 @@ public class PlaceAndRotateObjOnDisk : MonoBehaviour
 
     public void FreezeObj()
     {
-        if (rotateSpeed > 0f)
+        if (rotateSpeed > 0f && obj.transform.up.y == 1f && obj !=null)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }

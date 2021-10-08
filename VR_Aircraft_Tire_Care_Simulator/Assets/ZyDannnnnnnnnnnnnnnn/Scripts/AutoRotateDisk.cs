@@ -43,7 +43,7 @@ public class AutoRotateDisk : MonoBehaviour
     {
         if (speed > 0)
         {
-            speed = speed - acceleration * Time.deltaTime;
+            speed = speed - acceleration * Time.deltaTime * 5;
         }
         else if (speed < 0)
         {
