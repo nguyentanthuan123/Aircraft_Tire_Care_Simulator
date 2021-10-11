@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
       propertyPath: followSpeed
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -4787536466565821152, guid: 0d0a0cd213a3e8e4b85780c32620cf7c, type: 3}
       propertyPath: rotateSpeed
@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5583840065662661692, guid: 04681f0bd47020a4388c4d98bd9582de, type: 3}
       propertyPath: followSpeed
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -5583840065662661692, guid: 04681f0bd47020a4388c4d98bd9582de, type: 3}
       propertyPath: rotateSpeed

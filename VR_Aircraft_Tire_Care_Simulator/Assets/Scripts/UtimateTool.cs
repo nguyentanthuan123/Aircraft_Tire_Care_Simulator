@@ -112,7 +112,7 @@ public class UtimateTool : MonoBehaviour
         connectPoint.localScale = Vector3.one;
         transform.SetParent(connectPoint);
         connectPoint.position = useToolObjPoint.position;
-        connectPoint.rotation = useToolObjPoint.rotation;
+        connectPoint.rotation = useToolObjPoint.rotation; // connectPoint must has same rotation as tool to make sure direction are right
 
         // Init empty gameobject for connect joint
         connectJoint = new GameObject();

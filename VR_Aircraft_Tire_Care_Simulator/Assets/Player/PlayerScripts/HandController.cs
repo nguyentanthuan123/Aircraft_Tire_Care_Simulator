@@ -146,10 +146,14 @@ public class HandController : MonoBehaviour
         var twistScript = objGrabbing.GetComponent<TwistObj>();
         if (!twistScript) return;
 
+        objGrabbing.GetComponent<Collider>().enabled = false;
+        handCollider.enabled = false;
+
         twistingDelay = twistScript.delayTwistTime;
 
-        twistScript.GettingTwistIn();
+        // must be in order
         twistScript.GettingTwistOut();
+        twistScript.GettingTwistIn();
 
         if(twistScript.isFinishedTwistOut && twistScript.twistRealtime<=0)
         {
@@ -283,10 +287,10 @@ public class HandController : MonoBehaviour
     {
         if (followControllerTrans == null) return;
 
-        //follow position;
         var distance = Vector3.Distance(transform.position, followControllerTrans.position);
         rigi.velocity = (followControllerTrans.position - transform.position).normalized * (followSpeed * distance);
-        //follow rotation;
+        //transform.position = Vector3.Lerp(transform.position, followControllerTrans.position, followSpeed * distance);
+
         var quaternion = followControllerTrans.rotation * Quaternion.Inverse(rigi.rotation);
         quaternion.ToAngleAxis(out float angle, out Vector3 axis);
         rigi.angularVelocity = axis * (angle * Mathf.Deg2Rad * rotateSpeed);
