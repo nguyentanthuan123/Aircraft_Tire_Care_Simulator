@@ -36,7 +36,7 @@ public class HandController : MonoBehaviour
     private bool isGrabbing;
     private bool isSelected;
     private bool isUsingTool;
-    private bool isTwistedOut = false;
+    private bool isUsingPlier = false;
     private string objSelectedName;
     [SerializeField] private Transform palm;
     [SerializeField] private Camera mainCam;
@@ -104,10 +104,11 @@ public class HandController : MonoBehaviour
         //set input for action
         controller.hapticDeviceAction.action.started += TwistBtnInput;
         controller.hapticDeviceAction.action.started += UseTool;
+        controller.hapticDeviceAction.action.started += UsePlierTool;
+        controller.hapticDeviceAction.action.started += GrabByRaycast;
         controller.selectAction.action.started += Grab;
         controller.selectAction.action.started += HookHand;
         controller.selectAction.action.canceled += Drop;
-        controller.activateAction.action.started += GrabByRaycast;
         controller.activateAction.action.canceled += Drop;
     }
 
@@ -153,25 +154,26 @@ public class HandController : MonoBehaviour
 
         // must be in order
         twistScript.GettingTwistOut();
-        twistScript.GettingTwistIn();
 
         if(twistScript.isFinishedTwistOut && twistScript.twistRealtime<=0)
         {
-            if (!isTwistedOut)
+            if (twistScript.isPlaced)
             {
                 rigi.freezeRotation = false;
                 if (controller != null)
                 {
                     followControllerTrans = controller.transform;
                 }
-                isTwistedOut = true;
+                twistScript.isPlaced = false;
             }
             else
             {
                 twistScript.MoveToPlacement();
-                isTwistedOut = false;
             }
         }
+
+        twistScript.GettingTwistIn();
+        
         StartCoroutine(TwistObjDelay());
     }
     IEnumerator TwistObjDelay()
@@ -215,6 +217,25 @@ public class HandController : MonoBehaviour
         }
         
     }
+
+    private void UsePlierTool(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (!objGrabbing) return;
+
+        var plierScript = objGrabbing.GetComponent<Plier>();
+        if (!plierScript) return;
+
+        if (isUsingPlier)
+        {
+            plierScript.releasePlier();
+            isUsingPlier = false;
+        }
+        else
+        {
+            plierScript.usingPlier();
+            isUsingPlier = true;
+        }
+    }
     private void HightlightObj()
     {
         //if (objGrabbing && isGrabbing) return;
@@ -246,13 +267,17 @@ public class HandController : MonoBehaviour
     }
     private void changeMaterial(RaycastHit hit)
     {
-        var hightlightCompoment = hit.transform.GetComponent<HightLightSelected>();
-        if (!hightlightCompoment) return;
-
+        var hightLightScript = hit.transform.GetComponent<HightLightSelected>();
+        if (!hightLightScript)
+        {
+            hightLightScript = hit.transform.GetComponentInChildren<HightLightSelected>();
+            if (!hightLightScript) return;
+        }
         objSelected = hit.transform.gameObject;
         objSelectedName = hit.transform.gameObject.name;
-        hightlightCompoment.isChanged = true;
-        hit.transform.GetComponent<Renderer>().material = hightLightMaterial;
+        hightLightScript.isChanged = true;
+        hightLightScript.gameObject.GetComponent<Renderer>().material = hightLightMaterial;
+        //mat = hightLightMaterial;
         isSelected = true;
     }
 
@@ -260,8 +285,13 @@ public class HandController : MonoBehaviour
     {
         if(objSelected != null)
         {
-            objSelected.transform.GetComponent<HightLightSelected>().isHightLight = false;
-            objSelected.transform.GetComponent<HightLightSelected>().isChanged = false;
+            HightLightSelected hightLightScript = objSelected.transform.GetComponent<HightLightSelected>();
+            if (!hightLightScript)
+            {
+                hightLightScript = objSelected.transform.GetComponentInChildren<HightLightSelected>();
+            }
+            hightLightScript.isHightLight = false;
+            hightLightScript.isChanged = false;
             objSelected = null;
         }
     }
@@ -294,6 +324,14 @@ public class HandController : MonoBehaviour
         var quaternion = followControllerTrans.rotation * Quaternion.Inverse(rigi.rotation);
         quaternion.ToAngleAxis(out float angle, out Vector3 axis);
         rigi.angularVelocity = axis * (angle * Mathf.Deg2Rad * rotateSpeed);
+    }
+    private void hideHand()
+    {
+        handModel.GetComponent<SkinnedMeshRenderer>().enabled = false;
+    }
+    private void showHand()
+    {
+        handModel.GetComponent<SkinnedMeshRenderer>().enabled = true;
     }
     private void Grab(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {

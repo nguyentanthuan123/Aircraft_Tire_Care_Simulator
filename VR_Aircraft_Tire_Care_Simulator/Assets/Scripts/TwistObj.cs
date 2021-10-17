@@ -23,18 +23,17 @@ public class TwistObj : MonoBehaviour
     [HideInInspector]
     public int twistRealtime;
     [HideInInspector]
-    public bool isFinishedTwistOut, isFinishedTwistIn;
+    public bool isFinishedTwistOut, isFinishedTwistIn, isPlaced= false;
     private Rigidbody rigi;
     private float xPlus = 0, yPlus = 0, zPlus = 0;
     private float speedRotate = 54f; // speed when rotating -> 54 * 0.1(rotate) == 1 lap / 1s
     private float xRotate = 0, yRotate = 0, zRotate = 0;
-    private bool isTwistingIn = false, isTwistingOut = false;
+    private bool isTwistingIn = false, isTwistingOut = false, isMoveToPlacement;
     
     // Start is called before the first frame update
     void Start()
     {
         speedRotate = speedRotate * lapPerSecond;
-        isFinishedTwistOut = true;
         isFinishedTwistIn = false;
 
         rigi = GetComponent<Rigidbody>();
@@ -55,12 +54,14 @@ public class TwistObj : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, placement.position) <= placeDistance)
             {
+                isFinishedTwistOut = true;
                 //MoveToPlacement();
                 ResetTwist();
                 StandalState();
             }
             else
             {
+                isFinishedTwistOut = false;
                 FinishedTwistOut();
             }
         }
@@ -86,9 +87,13 @@ public class TwistObj : MonoBehaviour
             transform.rotation = placement.rotation;
             ResetTwist();
         }
+
+        isMoveToPlacement = true;
     }
     public void GettingTwistIn()
     {
+        if (!isMoveToPlacement) return;
+
         if (isFinishedTwistIn) return;
 
         if (isTwistingIn) return;
@@ -132,6 +137,7 @@ public class TwistObj : MonoBehaviour
         this.gameObject.layer = grabableLayerNum; 
         rigi.isKinematic = false;
         isFinishedTwistOut = true;
+        isMoveToPlacement = false;
     }
     public void ResetTwist()
     {
@@ -151,6 +157,7 @@ public class TwistObj : MonoBehaviour
     {
         isFinishedTwistOut = false;
         isFinishedTwistIn = true;
+        isPlaced = true;
         twistRealtime = twistTime;
         transform.position = standalTransform.position;
         transform.rotation = standalTransform.rotation;

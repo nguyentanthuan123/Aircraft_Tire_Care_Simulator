@@ -28,17 +28,21 @@ public class ToolsBox : MonoBehaviour
     public Transform showToolPoint;
     private Dictionary<string, GameObject> poolDictionary;
     private Animator boxAnim;
+    private Animator toolListPanelAnim;
     // Start is called before the first frame update
     void Start()
     {
         boxAnim = GetComponent<Animator>();
+        toolListPanelAnim = toolsListPanel.GetComponent<Animator>();
         poolDictionary = new Dictionary<string, GameObject>();
         foreach( Tool tool in tools)
         {
             GameObject toolObj = Instantiate(tool.toolPrefab, transform.position, Quaternion.identity);
             GameObject toolSlotObj = Instantiate(toolSlot, toolsGrid.transform);
             toolSlotObj.GetComponent<Image>().sprite = tool.toolIcon;
-            toolSlotObj.GetComponent<ToolSlot>().toolType = tool.toolType;
+            ToolSlot toolSlotScript = toolSlotObj.GetComponent<ToolSlot>();
+            toolSlotScript.toolType = tool.toolType;
+            toolSlotScript.setName();
             toolObj.SetActive(false);
             poolDictionary.Add(tool.toolType, toolObj);
         }
@@ -59,13 +63,15 @@ public class ToolsBox : MonoBehaviour
     public void OpenToolsBoxBtn()
     {
         boxAnim.SetBool("IsOpen",true);
+        toolListPanelAnim.SetBool("isActive", true);
         boxhandle1.SetActive(false);
         boxhandle2.SetActive(false);
     }
     public void CloseToolsBoxBtn()
     {
         boxAnim.SetBool("IsOpen", false);
-        toolsListPanel.SetActive(false);
+        toolListPanelAnim.SetBool("isActive", false);
+        //toolsListPanel.SetActive(false);
     }
     public void OpenToolsListPanel()
     {

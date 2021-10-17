@@ -154,6 +154,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "BackPrimaryInput",
+                    "type": "Button",
+                    "id": "cc4e1204-7e52-49ef-9de5-5b7d71fa8444",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -486,6 +494,17 @@
                     "action": "Translate Anchor",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "cad9cb98-a71f-4318-a5e7-69e3e2706f33",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BackPrimaryInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -601,6 +620,14 @@
                     "name": "Primary Input",
                     "type": "Button",
                     "id": "ba9fc71f-9ccb-49df-b9d9-895cb2678fd8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "BackPrimaryInput",
+                    "type": "Button",
+                    "id": "e321f6f2-c17f-4a8d-ac49-bc6b391e208a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -934,6 +961,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Primary Input",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31623fb0-3343-44d6-a664-724a5b3cb130",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BackPrimaryInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

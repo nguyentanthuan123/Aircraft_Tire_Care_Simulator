@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class UtimateTool : MonoBehaviour
 {
+    // obj use script must be obj have collider for grab
     public enum moveDirectionEnum { moveX,moveY,moveZ} // State of direction to move tool
     public moveDirectionEnum moveDirection;
     public LayerMask targetUseToolLayer; // Layer of obj use tool
-    public Transform connectPoint; // position to connect obj use tool
+    public Transform connectPoint; // position to connect obj use tool - connectPoint must be zero rotation relative to use script obj
     public float connectDistance; // distance to connect - use tool
     public float jointLimitMin, jointLimitMax; // limit of hinge joint - move hand tool
     public int connectMass; // mass of connect joint when connection active
@@ -24,7 +25,7 @@ public class UtimateTool : MonoBehaviour
     private FixedJoint jointToConnectPoint;
     private DetectiveJointBreak jointBreakScript;
     private TwistObj twistObjScript;
-    // private float speedFollow = 10f;
+    private float angleRotateValue;
     private int xAxis = 0, yAxis = 0, zAxis = 0;
     private int sideValue; // 1 = Right, 0 = Left;
     private bool isActive = false, isTwistTarget = true, isSwistSideFirst = true;
@@ -40,11 +41,18 @@ public class UtimateTool : MonoBehaviour
         rigiTool.mass = GrabToolMass;
 
         // set direction move tool sate
-        if (moveDirection == moveDirectionEnum.moveX) xAxis = 1;
-
-        if (moveDirection == moveDirectionEnum.moveY) yAxis = 1;
-
-        if (moveDirection == moveDirectionEnum.moveZ) zAxis = 1;
+        if (moveDirection == moveDirectionEnum.moveX)
+        {
+            xAxis = 1;
+        }
+        if (moveDirection == moveDirectionEnum.moveY)
+        {
+            yAxis = 1;
+        }
+        if (moveDirection == moveDirectionEnum.moveZ)
+        {
+            zAxis = 1;
+        }
     }
 
     // Update is called once per frame
@@ -52,32 +60,25 @@ public class UtimateTool : MonoBehaviour
     {
         if (isActive)
         {
-            if (jointBreakScript.isBreak) // check if joint to use tool obj break
+            if (joint.angle  > jointLimitMax - 1) //check angle go to hinge joint max limit or min limit
             {
-                DeactivateTool();
-            }
-            else
-            {
-                if (joint.angle > jointLimitMax - 1) //check angle go to hinge joint max limit or min limit
+                if (sideValue == 1 || isSwistSideFirst) //check sideValue for 1 = Max or 0 = min or is the first time swist side to ignore sideValue
                 {
-                    if (sideValue == 1 || isSwistSideFirst) //check sideValue for 1 = Max or 0 = min or is the first time swist side to ignore sideValue
-                    {
-                        // must be in order
-                        sideValue = 1; // set sideValue for the first time swist
-                        TwistingByTool();
-                        isSwistSideFirst = false;
-                        sideValue = 0; // set sideValue to ignore statements if next swist time is the same side
-                    }
+                    // must be in order
+                    sideValue = 1; // set sideValue for the first time swist
+                    TwistingByTool();
+                    isSwistSideFirst = false;
+                    sideValue = 0; // set sideValue to ignore statements if next swist time is the same side
                 }
-                if (joint.angle < jointLimitMin + 1) 
+            }
+            if (joint.angle < jointLimitMin + 1)
+            {
+                if (sideValue == 0 || isSwistSideFirst)
                 {
-                    if (sideValue == 0 || isSwistSideFirst)
-                    {
-                        sideValue = 0;
-                        TwistingByTool();
-                        isSwistSideFirst = false;
-                        sideValue = 1;
-                    }
+                    sideValue = 0;
+                    TwistingByTool();
+                    isSwistSideFirst = false;
+                    sideValue = 1;
                 }
             }
         }
@@ -96,7 +97,7 @@ public class UtimateTool : MonoBehaviour
         twistObjScript = targetUseTool.GetComponent<TwistObj>();
         if (!twistObjScript) return;
 
-        // find obj use tool connection point - use tool objs have to have a child tranform with tag "UseToolPoint"
+        // find obj use tool connection point - use tool objs have to have a child tranform with tag "UseToolPoint" and have vector X Point Backward
         Transform[] useToolObjParts = targetUseTool.GetComponentsInChildren<Transform>();
         foreach(Transform part in useToolObjParts)
         {
@@ -118,7 +119,7 @@ public class UtimateTool : MonoBehaviour
         connectJoint = new GameObject();
         connectJoint.transform.SetParent(this.transform);
         connectJoint.transform.position = connectPoint.position;
-        connectJoint.transform.rotation = connectPoint.rotation; // vector z of connectPoint has to look backward to tool tail
+        connectJoint.transform.rotation = connectPoint.rotation; // vector z of connectPoint has to look backward to tool tail and x has to point up
 
         // Add joint for tool
         var rigiJoint = connectJoint.AddComponent<Rigidbody>();
@@ -129,7 +130,6 @@ public class UtimateTool : MonoBehaviour
         // Add joint for obj use tool
         jointToConnectPoint = connectJoint.AddComponent<FixedJoint>();
         jointToConnectPoint.connectedBody = targetUseTool.GetComponent<Rigidbody>();
-        jointBreakScript = connectJoint.AddComponent<DetectiveJointBreak>(); // Add script for check joint break
 
         // Setting hinge joint limit
         joint.useLimits = true;
@@ -143,6 +143,7 @@ public class UtimateTool : MonoBehaviour
         axis.x = xAxis;
         axis.y = yAxis;
         axis.z = zAxis;
+        joint.axis = axis;
 
         rigiTool.mass = toolMass; // set heavy mass to stable hand
 
