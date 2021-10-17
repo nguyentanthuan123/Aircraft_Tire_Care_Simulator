@@ -26,7 +26,7 @@ public class PlaceJack : MonoBehaviour
         if (placeJack())
         {
             // make sure the jack in right position and on ground
-            if (Mathf.Round(body.transform.up.y * 1000.0f) * 0.001f >= 1f && IsGrounded())
+            if (Mathf.Round(body.transform.up.y * 10000000.0f) * 0.0000001f >= 1 && IsGrounded())
             {
                 isPlaced = true;
             }
