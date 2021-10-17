@@ -44,7 +44,7 @@ public class PushButton : MonoBehaviour
         {
             value = 0;
         }
-        //Debug.Log(value);
+        Debug.Log(value);
 
         return Mathf.Clamp(value, -1f, 1f);
     }

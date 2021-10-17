@@ -5,6 +5,7 @@ using UnityEngine;
 public class boxCastTest : MonoBehaviour
 {
     private BoxCollider boxCollider;
+    public float maxDistance;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,20 +16,25 @@ public class boxCastTest : MonoBehaviour
     void Update()
     {
         boxCollider = this.GetComponent<BoxCollider>();
-        IsGrounded();
+
+        
     }
 
-    private bool IsGrounded()
+    private void OnDrawGizmos()
     {
+        
         RaycastHit hitInfo;
-        if (Physics.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, Vector3.down, out hitInfo))
+        if (Physics.BoxCast(boxCollider.bounds.center, new Vector3(0.1f, 0.1f, 0.1f), Vector3.down, out hitInfo, Quaternion.identity, maxDistance))
         {
-            Debug.Log(hitInfo.collider.gameObject);
-            if (hitInfo.collider.gameObject.layer.Equals("Ground"))
-            {
-                return true;
-            }
+            Gizmos.DrawWireCube(boxCollider.bounds.center - transform.up * hitInfo.distance, boxCollider.bounds.size);
+            Debug.Log(hitInfo.collider);
+
         }
-        return false;
+        else
+        {
+            Debug.Log("off ground");
+        }
+
     }
+
 }
