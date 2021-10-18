@@ -10,10 +10,19 @@ EditorBuildSettings:
     guid: bb9246e5c12c8f940be292e127e2bc43
   - enabled: 1
     path: Assets/Scenes/Cockpit 1.unity
-    guid: bb8d05eb04f3691438cbaa14cef5ac04
+    guid: 33fec45e95c449e4fbc4901fbd73d676
   - enabled: 1
     path: Assets/Scenes/Workshop 1.unity
-    guid: b1964e515e9c1c9418a505a31526c48a
+    guid: b9280ac646653674a9accae1214e9a44
+  - enabled: 1
+    path: Assets/ZyDan 1/Scenes/Cockpit 2.unity
+    guid: cd9a15d7c662db14991b7bd55a548a3b
+  - enabled: 1
+    path: Assets/ZyDan 1/Scenes/Parking 2.unity
+    guid: fb17a37102e203c40be244fd8ea5fe76
+  - enabled: 1
+    path: Assets/ZyDan 1/Scenes/Workshop 2.unity
+    guid: 68d0210663e1b82478d1bb6d4e014404
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3bcbf6d8eae8238489175d8e8646ea3f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 79abaa44bf10e3d48955030b37a67c89, type: 2}
