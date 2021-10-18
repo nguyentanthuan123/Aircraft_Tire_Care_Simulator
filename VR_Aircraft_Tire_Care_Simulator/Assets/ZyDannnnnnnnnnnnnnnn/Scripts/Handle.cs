@@ -7,7 +7,7 @@ public class Handle : MonoBehaviour
     public UnityEvent OnPressed, OnReleased;
     public Transform handle;
     public Transform body;
-
+    public float force;
     private float initialAngle;
     private float currentAngle;
 
@@ -20,6 +20,9 @@ public class Handle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        handle.GetComponent<Rigidbody>().MovePosition(handle.position);
+        //handle.GetComponent<Rigidbody>().MoveRotation(handle.rotation);
+
         currentAngle = transform.eulerAngles.z;
 
         //activate cylinder when handle is moving down

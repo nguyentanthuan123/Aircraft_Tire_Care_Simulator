@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PlaceJack : MonoBehaviour
 {
-    [SerializeField] private float dis;
-    
+    [SerializeField] private float dis; //y axis distance from body positon to ground by 
+    [SerializeField] private float radius; // y axis distance ground check point - ground; 0.088 is size of body box collider by y axis
+
     public Transform body;
     public Transform handle;
     public Transform cylinder1;
     public Transform dome;
+    public Transform groundCheck;
     public GameObject sideViewDisplay;
     public GameObject ruler;
     public bool isPlaced;
+    public LayerMask groundLayerMask;
+
   
     // Start is called before the first frame update
     void Start()
@@ -26,9 +30,13 @@ public class PlaceJack : MonoBehaviour
         if (placeJack())
         {
             // make sure the jack in right position and on ground
-            if (Mathf.Round(body.transform.up.y * 10000000.0f) * 0.0000001f >= 1 && IsGrounded())
+            if (IsGrounded())
             {
                 isPlaced = true;
+            }
+            else
+            {
+                isPlaced = false;
             }
             ruler.SetActive(true);
             sideViewDisplay.SetActive(true);
@@ -61,12 +69,20 @@ public class PlaceJack : MonoBehaviour
     private bool IsGrounded()
     {
         RaycastHit hitInfo;
+        
         Ray ray = new Ray(body.transform.position, -body.transform.up);
-        if(Physics.Raycast(ray, out hitInfo, dis))
+        if(Physics.Raycast(ray, out hitInfo, dis, groundLayerMask) && Physics.CheckSphere(groundCheck.position, radius, groundLayerMask))
         {
             return true;
         }
         return false;
+
+        
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, radius);
     }
 }
 
