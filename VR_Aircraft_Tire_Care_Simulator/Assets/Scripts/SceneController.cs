@@ -5,18 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public GameObject toolListPanel;
-    // Start is called before the first frame update
-    void Start()
+    #region singleton
+    public static SceneController instance;
+    private void Awake()
     {
-        
+        instance = this;
     }
+    #endregion
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject menuPanel;
+    public GameObject toolListPanel;
+    public GameObject taskPanel;
 
     public void GoToNLG()
     {
@@ -39,5 +38,21 @@ public class SceneController : MonoBehaviour
     public void CloseToolList()
     {
         toolListPanel.SetActive(false);
+    }
+    public void OpenTaskPanel()
+    {
+        if(taskPanel != null)
+        {
+            bool isActive = taskPanel.activeSelf;
+            taskPanel.SetActive(!isActive);
+        }
+    }
+    public void OpenMenu()
+    {
+        if (menuPanel != null)
+        {
+            bool isActive = menuPanel.activeSelf;
+            menuPanel.SetActive(!isActive);
+        }
     }
 }

@@ -94,6 +94,8 @@ public class UtimateTool : MonoBehaviour
 
         // set target and check if it has TwistObj Script
         targetUseTool = targetCollider[0].gameObject;
+        if (!IsActiveTask(targetUseTool)) return;
+
         twistObjScript = targetUseTool.GetComponent<TwistObj>();
         if (!twistObjScript) return;
 
@@ -217,5 +219,11 @@ public class UtimateTool : MonoBehaviour
                 isTwistTarget = false;
             }
         }
+    }
+    private bool IsActiveTask(GameObject obj)
+    {
+        if (obj.transform.tag.Equals("isActiveTask")) return true;
+
+        return false;
     }
 }

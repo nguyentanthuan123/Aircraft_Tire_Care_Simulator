@@ -57,7 +57,7 @@
                     "id": "83a7af0b-87e3-42c3-a909-95fbf8091e4f",
                     "expectedControlType": "Vector3",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 },
                 {
                     "name": "Rotation",
@@ -498,10 +498,10 @@
                 {
                     "name": "",
                     "id": "cad9cb98-a71f-4318-a5e7-69e3e2706f33",
-                    "path": "",
-                    "interactions": "",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "Press",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "BackPrimaryInput",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -967,10 +967,10 @@
                 {
                     "name": "",
                     "id": "31623fb0-3343-44d6-a664-724a5b3cb130",
-                    "path": "",
-                    "interactions": "",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "Press",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "BackPrimaryInput",
                     "isComposite": false,
                     "isPartOfComposite": false

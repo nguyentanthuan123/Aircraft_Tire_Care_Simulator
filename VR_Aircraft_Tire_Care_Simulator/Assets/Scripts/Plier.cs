@@ -25,6 +25,8 @@ public class Plier : MonoBehaviour
         if (colliders.Length < 1) return;
 
         usePlierObj = colliders[0].gameObject;
+        if (!usePlierObj.transform.tag.Equals("isActiveTask")) return;
+
         connectJoint = usePlierObj.AddComponent<FixedJoint>();
         var Rigi = GetComponent<Rigidbody>();
         connectJoint.connectedBody = Rigi;

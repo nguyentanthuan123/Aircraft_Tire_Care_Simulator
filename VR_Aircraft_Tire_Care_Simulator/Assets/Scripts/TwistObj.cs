@@ -138,6 +138,7 @@ public class TwistObj : MonoBehaviour
         rigi.isKinematic = false;
         isFinishedTwistOut = true;
         isMoveToPlacement = false;
+        GetComponent<Task>().FinishedTask();
     }
     public void ResetTwist()
     {

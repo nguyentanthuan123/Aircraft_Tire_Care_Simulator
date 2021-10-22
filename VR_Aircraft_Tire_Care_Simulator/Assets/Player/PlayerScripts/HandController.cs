@@ -102,6 +102,7 @@ public class HandController : MonoBehaviour
         }
 
         //set input for action
+        controller.translateAnchorAction.action.started += OpenMenuBtn;
         controller.hapticDeviceAction.action.started += TwistBtnInput;
         controller.hapticDeviceAction.action.started += UseTool;
         controller.hapticDeviceAction.action.started += UsePlierTool;
@@ -138,11 +139,17 @@ public class HandController : MonoBehaviour
             isPressed = false;
         }*/
     }
+    private void OpenMenuBtn(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        SceneController.instance.OpenMenu();
+    }
     private void TwistBtnInput(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         if (!isTwistable) return;
 
         if (objGrabbing == null) return;
+
+        if (!objGrabbing.transform.tag.Equals("isActiveTask")) return;
 
         var twistScript = objGrabbing.GetComponent<TwistObj>();
         if (!twistScript) return;
@@ -190,6 +197,8 @@ public class HandController : MonoBehaviour
         if (hookCollider.Length < 1) return;
 
         objGrabbing = hookCollider[0].transform.gameObject;
+        if (!objGrabbing.transform.tag.Equals("isActiveTask")) return;
+
         var hookRigi = objGrabbing.GetComponent<Rigidbody>();
         StartCoroutine(AddJoint(hookCollider[0], hookRigi));
 
