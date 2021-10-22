@@ -18,6 +18,7 @@ public class TaskManager : MonoBehaviour
         public string taskName;
         public GameObject objHasTask;
         public int taskOrder;
+        [HideInInspector]
         public GameObject taskUI;
     }
     public List<taskObj> taskObjsList;
@@ -45,13 +46,16 @@ public class TaskManager : MonoBehaviour
         if (taskObjsList.Count < 1) return;
 
         taskObj temp;
-        for(int i = 0; i < taskObjsList.Count-1; i++)
+        for(int i = 0; i < taskObjsList.Count -1 ; i++)
         {
-            if(taskObjsList[i].taskOrder > taskObjsList[i+1].taskOrder)
+            for(int j = i+1;j<taskObjsList.Count; j++)
             {
-                temp = taskObjsList[i];
-                taskObjsList[i] = taskObjsList[i + 1];
-                taskObjsList[i + 1] = temp;
+                if (taskObjsList[i].taskOrder > taskObjsList[j].taskOrder)
+                {
+                    temp = taskObjsList[i];
+                    taskObjsList[i] = taskObjsList[j];
+                    taskObjsList[j] = temp;
+                }
             }
             taskObjsList[i].objHasTask.GetComponent<Task>().taskID = i;
         }
@@ -65,6 +69,7 @@ public class TaskManager : MonoBehaviour
             {
                 taskObjNode.taskUI.SetActive(true);
                 taskObjNode.objHasTask.transform.tag = "isActiveTask";
+                taskObjNode.objHasTask.GetComponent<Collider>().enabled = true;
             }
         }
     }
