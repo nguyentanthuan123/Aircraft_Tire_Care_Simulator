@@ -16,6 +16,7 @@ public class SceneController : MonoBehaviour
     public GameObject menuPanel;
     public GameObject toolListPanel;
     public GameObject taskPanel;
+    public GameObject videoPanel;
 
     public void GoToNLG()
     {
@@ -53,6 +54,14 @@ public class SceneController : MonoBehaviour
         {
             bool isActive = menuPanel.activeSelf;
             menuPanel.SetActive(!isActive);
+        }
+    }
+    public void OpenVideo()
+    {
+        if (videoPanel != null)
+        {
+            bool isActive = videoPanel.activeSelf;
+            videoPanel.SetActive(!isActive);
         }
     }
 }
