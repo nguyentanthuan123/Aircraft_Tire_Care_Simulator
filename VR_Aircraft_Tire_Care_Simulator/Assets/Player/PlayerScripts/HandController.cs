@@ -196,8 +196,16 @@ public class HandController : MonoBehaviour
         Collider[] hookCollider = Physics.OverlapSphere(palm.position, jointDistance, hookLayer);
         if (hookCollider.Length < 1) return;
 
-        objGrabbing = hookCollider[0].transform.gameObject;
-        if (!objGrabbing.transform.tag.Equals("isActiveTask")) return;
+        foreach(Collider hook in hookCollider)
+        {
+            if (hook.transform.gameObject.transform.tag.Equals("isActiveTask"))
+            {
+                objGrabbing = hook.transform.gameObject;
+                break;
+            }
+        }
+
+        if (!objGrabbing) return;
 
         var hookRigi = objGrabbing.GetComponent<Rigidbody>();
         StartCoroutine(AddJoint(hookCollider[0], hookRigi));

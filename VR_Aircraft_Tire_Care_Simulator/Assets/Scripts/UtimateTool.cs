@@ -93,8 +93,18 @@ public class UtimateTool : MonoBehaviour
         if (targetCollider.Length < 1) return;
 
         // set target and check if it has TwistObj Script
-        targetUseTool = targetCollider[0].gameObject;
-        if (!IsActiveTask(targetUseTool)) return;
+        foreach (Collider target in targetCollider)
+        {
+            if (target.transform.gameObject.transform.tag.Equals("isActiveTask"))
+            {
+                targetUseTool = target.transform.gameObject;
+                break;
+            }
+        }
+
+        if (!targetUseTool) return;
+
+       // if (!IsActiveTask(targetUseTool)) return;
 
         twistObjScript = targetUseTool.GetComponent<TwistObj>();
         if (!twistObjScript) return;
@@ -108,6 +118,7 @@ public class UtimateTool : MonoBehaviour
                 useToolObjPoint = part;
             }
         }
+
         if (useToolObjPoint == null) return;
 
         // move to obj use tool position have connection point
@@ -220,10 +231,10 @@ public class UtimateTool : MonoBehaviour
             }
         }
     }
-    private bool IsActiveTask(GameObject obj)
+   /* private bool IsActiveTask(GameObject obj)
     {
         if (obj.transform.tag.Equals("isActiveTask")) return true;
 
         return false;
-    }
+    }*/
 }

@@ -7,6 +7,7 @@ public class FollowTarget : MonoBehaviour
     [SerializeField]
     public GameObject target;
     public float speed;
+    public float distanceStayAway;
     public bool freezeX, freezeY, freezeZ;
     private int x, y, z;
     private float xThis, yThis, zThis;
@@ -49,6 +50,9 @@ public class FollowTarget : MonoBehaviour
     void Update()
     {
         Vector3 followPoint = target.transform.position;
-        transform.position = Vector3.Lerp(transform.position,new Vector3(followPoint.x * x + xThis, followPoint.y * y + yThis,followPoint.z * z +zThis) , speed * Time.deltaTime);
+        if(Vector3.Distance(target.transform.position,this.transform.position)> distanceStayAway)
+        {
+            transform.position = Vector3.Lerp(transform.position, new Vector3(followPoint.x * x + xThis, followPoint.y * y + yThis, followPoint.z * z + zThis), speed * Time.deltaTime);
+        }
     }
 }

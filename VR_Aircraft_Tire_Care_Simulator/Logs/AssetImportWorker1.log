@@ -1,0 +1,1299 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.15f2 (6cf78cb77498) revision 7141260'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home Single Language; OS build 19043.1288; Version 2009; 64bit' Language: 'vi' Physical Memory: 7599 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.15f2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/Hercules/Documents/GitHub/Aircraft_Tire_Care_Simulator/VR_Aircraft_Tire_Care_Simulator
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+59424
+Successfully changed project path to: C:/Users/Hercules/Documents/GitHub/Aircraft_Tire_Care_Simulator/VR_Aircraft_Tire_Care_Simulator
+C:/Users/Hercules/Documents/GitHub/Aircraft_Tire_Care_Simulator/VR_Aircraft_Tire_Care_Simulator
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 95.38 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.74 ms.
+Initialize engine version: 2020.3.15f2 (6cf78cb77498)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Hercules/Documents/GitHub/Aircraft_Tire_Care_Simulator/VR_Aircraft_Tire_Care_Simulator/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 Ti (ID=0x1f95)
+    Vendor:   
+    VRAM:     3962 MB
+    Driver:   27.21.14.5763
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56024
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001662 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 80.11 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.664 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1664ms)
+		BeginReloadAssembly (45ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (443ms)
+			LoadAssemblies (43ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (165ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (185ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (80ms)
+				BeforeProcessingInitializeOnLoad (10ms)
+				ProcessInitializeOnLoadAttributes (68ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.008590 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 79.34 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+[XR] OculusXRPlugin: registering subsystems
+[XR] Unable to register display lifecyle provider: [1]
+[XR] Oculus Input lifecycle provider registered.
+[XR] Unable to register input lifecyle provider: [1]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\Hercules\Documents\GitHub\Aircraft_Tire_Care_Simulator\VR_Aircraft_Tire_Care_Simulator\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\Hercules\Documents\GitHub\Aircraft_Tire_Care_Simulator\VR_Aircraft_Tire_Care_Simulator\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00047] in <44c3723143904fb88deebc993c7bb491>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.903 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1905ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1713ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (386ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (1061ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (80ms)
+				BeforeProcessingInitializeOnLoad (113ms)
+				ProcessInitializeOnLoadAttributes (844ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.15 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 4127 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.5 MB.
+System memory in use after: 179.7 MB.
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 4567.
+Total: 3.741700 ms (FindLiveObjects: 0.384800 ms CreateObjectMapping: 0.108600 ms MarkObjects: 3.152900 ms  DeleteObjects: 0.094100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/FollowTarget.cs
+  artifactKey: Guid(ac181a80d73c76945b15021a505bd9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FollowTarget.cs using Guid(ac181a80d73c76945b15021a505bd9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08bfebbe3588c11c45e29dc0bd7bee1b') in 0.029353 seconds 
+  Import took 0.036816 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008473 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\Hercules\Documents\GitHub\Aircraft_Tire_Care_Simulator\VR_Aircraft_Tire_Care_Simulator\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\Hercules\Documents\GitHub\Aircraft_Tire_Care_Simulator\VR_Aircraft_Tire_Care_Simulator\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00047] in <44c3723143904fb88deebc993c7bb491>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.274 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1274ms)
+		BeginReloadAssembly (102ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (1119ms)
+			LoadAssemblies (81ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (283ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (589ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (467ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Unloading 3968 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 4571.
+Total: 4.183900 ms (FindLiveObjects: 0.479600 ms CreateObjectMapping: 0.137100 ms MarkObjects: 3.523300 ms  DeleteObjects: 0.042100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1524.232877 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/1.png
+  artifactKey: Guid(d5a67aafeb80e2740b1fd5833bd546ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/1.png using Guid(d5a67aafeb80e2740b1fd5833bd546ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65a1ae9c6ac888e7c91b3cbead16f04c') in 0.126219 seconds 
+  Import took 0.135536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/3.png
+  artifactKey: Guid(bcceef34aacdf054f8d27ad5d8a23f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/3.png using Guid(bcceef34aacdf054f8d27ad5d8a23f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77f5d26d4d3222f55714eb6a1e6c0fda') in 0.026234 seconds 
+  Import took 0.033256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/4.png
+  artifactKey: Guid(0ee9ce3c4a8c48d4390e463a3ba312e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/4.png using Guid(0ee9ce3c4a8c48d4390e463a3ba312e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0156c72f54ff6d135d6715f3cdb2387') in 0.023828 seconds 
+  Import took 0.031678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/11.png
+  artifactKey: Guid(23be684f5f60a4143b3d4a4f16a0c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/11.png using Guid(23be684f5f60a4143b3d4a4f16a0c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd647ad24297881b5df28724ef035602') in 0.022441 seconds 
+  Import took 0.030279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/1.png
+  artifactKey: Guid(d5a67aafeb80e2740b1fd5833bd546ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/1.png using Guid(d5a67aafeb80e2740b1fd5833bd546ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65a1ae9c6ac888e7c91b3cbead16f04c') in 0.013116 seconds 
+  Import took 0.019487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/12.png
+  artifactKey: Guid(085014a78567c0b43ac46d09ccdc2baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/12.png using Guid(085014a78567c0b43ac46d09ccdc2baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2f65463ee0c239b7ee1a690f9f8c1e8') in 0.024491 seconds 
+  Import took 0.031864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/10.png
+  artifactKey: Guid(0102fe8424b382f449dcd18693a40655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/10.png using Guid(0102fe8424b382f449dcd18693a40655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a921ab2ad48b0a1cfffcc075a78b82d2') in 0.022354 seconds 
+  Import took 0.029412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000439 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/5.png
+  artifactKey: Guid(80bb6b946e501814fbd9b702b2296ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/5.png using Guid(80bb6b946e501814fbd9b702b2296ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4141937588ee197f93d03427c76b6776') in 0.024098 seconds 
+  Import took 0.031323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/9.png
+  artifactKey: Guid(217c827a4566fa54298682a2a7c8bbaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/9.png using Guid(217c827a4566fa54298682a2a7c8bbaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9026840de4d3bf3046ced9077d350b81') in 0.022500 seconds 
+  Import took 0.031304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/8.png
+  artifactKey: Guid(a2adb5d4af68e464eb961dd87b544445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/8.png using Guid(a2adb5d4af68e464eb961dd87b544445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06c320682c9697d13ad65ed0aab445a6') in 0.024542 seconds 
+  Import took 0.031636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/7.png
+  artifactKey: Guid(99d6f8bab2d2cc1428575b16891a2985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/7.png using Guid(99d6f8bab2d2cc1428575b16891a2985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb2611d2eac439f4b835c5cc19bc51b2') in 0.023011 seconds 
+  Import took 0.030585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/6.png
+  artifactKey: Guid(4b7f0071f7439de46b41bb6f20bf813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/6.png using Guid(4b7f0071f7439de46b41bb6f20bf813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7b5c6afa48433d7027a56477727eaa') in 0.025247 seconds 
+  Import took 0.032042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/2.png
+  artifactKey: Guid(e5b652022882eb344a694f326841768b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/2.png using Guid(e5b652022882eb344a694f326841768b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2a2141e5282b1eaca530b76321d281') in 0.023328 seconds 
+  Import took 0.031013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001546 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/6.png
+  artifactKey: Guid(4b7f0071f7439de46b41bb6f20bf813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/6.png using Guid(4b7f0071f7439de46b41bb6f20bf813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7b5c6afa48433d7027a56477727eaa') in 0.016470 seconds 
+  Import took 0.022940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.558411 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/13.png
+  artifactKey: Guid(8fb37159bba4e8642b970b641fe68c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/13.png using Guid(8fb37159bba4e8642b970b641fe68c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '283eff4927c48e674b2837259f8244b2') in 0.028957 seconds 
+  Import took 0.037542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/14.png
+  artifactKey: Guid(dc46a41de026b3b4c9c0bde7995d1a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/14.png using Guid(dc46a41de026b3b4c9c0bde7995d1a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f82c1f6ad703c8d6cb3d8e568470cc92') in 0.031519 seconds 
+  Import took 0.040313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/15.png
+  artifactKey: Guid(a40eb0597a534e546a3d560ec881fc6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/15.png using Guid(a40eb0597a534e546a3d560ec881fc6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64d5dae5996620451da6bcdfe6e340e1') in 0.027310 seconds 
+  Import took 0.035750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000569 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/18.png
+  artifactKey: Guid(863d735c6b33c914a898daaa99d6021c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/18.png using Guid(863d735c6b33c914a898daaa99d6021c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93f33157545f5b797d1a241056590a70') in 0.029433 seconds 
+  Import took 0.038566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/16.png
+  artifactKey: Guid(997e6178416b3374bbdfae365855d0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/16.png using Guid(997e6178416b3374bbdfae365855d0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48d4a1bff28f15ac4c565d78c3254b85') in 0.029225 seconds 
+  Import took 0.037498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000508 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/17.png
+  artifactKey: Guid(18f0195b517f82a4ba879a7e977cca0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/17.png using Guid(18f0195b517f82a4ba879a7e977cca0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35e7e480e340472e8a52abcc733e2d96') in 0.027956 seconds 
+  Import took 0.037600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.265102 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/19.png
+  artifactKey: Guid(f1d3ea0efa59fed4c91bdc2fa505323b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/19.png using Guid(f1d3ea0efa59fed4c91bdc2fa505323b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5413b37a709e8abf057dbbe3aa4ad3fc') in 0.022481 seconds 
+  Import took 0.029220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/20.png
+  artifactKey: Guid(794ec5e7d7acb1a47ad4bf98ead3340e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/20.png using Guid(794ec5e7d7acb1a47ad4bf98ead3340e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1346f4e00e1f03568d3c59d912b0321') in 0.023906 seconds 
+  Import took 0.030786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/21.png
+  artifactKey: Guid(b4ab8c4fe0e23604cb89609a004e01fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/21.png using Guid(b4ab8c4fe0e23604cb89609a004e01fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24599a0001af874020c2934b313f4f38') in 0.024487 seconds 
+  Import took 0.031859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/24.png
+  artifactKey: Guid(7afbd9c38b9c36d4f80e08d8bd6f790a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/24.png using Guid(7afbd9c38b9c36d4f80e08d8bd6f790a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c06043ac474930d739372bb03ee4b348') in 0.023439 seconds 
+  Import took 0.030831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/22.png
+  artifactKey: Guid(dc133cd61ad275043a42d59ecddd71db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/22.png using Guid(dc133cd61ad275043a42d59ecddd71db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '877b555f44447e49ceecfeee1f95c3ad') in 0.022778 seconds 
+  Import took 0.029937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/23.png
+  artifactKey: Guid(9a9868fc8e65348489fb731106e4da4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/23.png using Guid(9a9868fc8e65348489fb731106e4da4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c0ffe3953ae6d70f650e4776cf41e41') in 0.022697 seconds 
+  Import took 0.030107 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/27.png
+  artifactKey: Guid(948e0185bea1b9c4dabe7d74e84b6740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/27.png using Guid(948e0185bea1b9c4dabe7d74e84b6740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9f1f2c0ba1ec528ab7abf90d5dff6b1') in 0.024162 seconds 
+  Import took 0.030970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/25.png
+  artifactKey: Guid(a8d41ba2d61d5e44481482ad02c21e76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/25.png using Guid(a8d41ba2d61d5e44481482ad02c21e76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c602af8c34c0ccbc2be44c8df93447') in 0.023144 seconds 
+  Import took 0.030516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/26.png
+  artifactKey: Guid(611226a4695eb874e95471492ecc0c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/26.png using Guid(611226a4695eb874e95471492ecc0c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af3e9b731ac3b4fcb25b131de3a7e0b2') in 0.024211 seconds 
+  Import took 0.031847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.182213 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/28.png
+  artifactKey: Guid(a0d5a996338b26d4fabc2789115e1a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/28.png using Guid(a0d5a996338b26d4fabc2789115e1a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92ff06c02761c5d2ae8faa5bc022cf21') in 0.022518 seconds 
+  Import took 0.029384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/30.png
+  artifactKey: Guid(5f7a2689cd87a3d48b82894ff536c96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/30.png using Guid(5f7a2689cd87a3d48b82894ff536c96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa3c0c2e6800319fe06be275b1e2fbd8') in 0.024914 seconds 
+  Import took 0.031605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/31.png
+  artifactKey: Guid(26db53e820292204eb964b22ebf019e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/31.png using Guid(26db53e820292204eb964b22ebf019e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db39c995360e1ae47f15603260f38edf') in 0.024517 seconds 
+  Import took 0.031769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000445 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/33.png
+  artifactKey: Guid(5d52522b0aaad4147a06fa932b2b4c6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/33.png using Guid(5d52522b0aaad4147a06fa932b2b4c6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eac4ecd699d9427730187d1c3622c99') in 0.025331 seconds 
+  Import took 0.033052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/29.png
+  artifactKey: Guid(e61d050005d5660459236f04d5072e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/29.png using Guid(e61d050005d5660459236f04d5072e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '902f01b3f28bc583db7d5dae0118ecda') in 0.025334 seconds 
+  Import took 0.032796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/32.png
+  artifactKey: Guid(ae837660bdeb2e84cb9bbdc97e4714ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/32.png using Guid(ae837660bdeb2e84cb9bbdc97e4714ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc311e7ca3a120c2908f96fe9edc685') in 0.023978 seconds 
+  Import took 0.031902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.252690 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/34.png
+  artifactKey: Guid(7bb9ef768998bdb4ab9ddb4582d2cb20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/34.png using Guid(7bb9ef768998bdb4ab9ddb4582d2cb20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab00f89196072dd8befb942d8d7af29') in 0.022480 seconds 
+  Import took 0.030138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/38.png
+  artifactKey: Guid(c005f0e0e9cedf04788caad9efb1251f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/38.png using Guid(c005f0e0e9cedf04788caad9efb1251f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a0bcf45ffac7820cc8fd3f0adde771a') in 0.024285 seconds 
+  Import took 0.031694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/39.png
+  artifactKey: Guid(477e59a875551a644906a666b0d9ecf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/39.png using Guid(477e59a875551a644906a666b0d9ecf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4fabf0323bce0fa9034b60256b6421a') in 0.022868 seconds 
+  Import took 0.030043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/37.png
+  artifactKey: Guid(161666889ff101c47a7672f3cccd9660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/37.png using Guid(161666889ff101c47a7672f3cccd9660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '598dc84e935871f82d9481a8cf797cdf') in 0.023554 seconds 
+  Import took 0.030134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/35.png
+  artifactKey: Guid(610fd521df726954e8702dbb8f79d486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/35.png using Guid(610fd521df726954e8702dbb8f79d486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63c690b470e8952efe5d4e792e77f96') in 0.022935 seconds 
+  Import took 0.029594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/40.png
+  artifactKey: Guid(c9b3b630659196646b1c8455a55f9181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/40.png using Guid(c9b3b630659196646b1c8455a55f9181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d7eea84fddee6d44f8e40453b476291') in 0.022741 seconds 
+  Import took 0.029462 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/36.png
+  artifactKey: Guid(ca080e89cdbf5d54d9178d0e4735fb72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/36.png using Guid(ca080e89cdbf5d54d9178d0e4735fb72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b064aecde42a3ad2742f12a5079102') in 0.023850 seconds 
+  Import took 0.030961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002802 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/40.png
+  artifactKey: Guid(c9b3b630659196646b1c8455a55f9181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Loader/40.png using Guid(c9b3b630659196646b1c8455a55f9181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d7eea84fddee6d44f8e40453b476291') in 0.013600 seconds 
+  Import took 0.020071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.170656 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Add Glow.png
+  artifactKey: Guid(7724d2fa1a180bc43968a0a414b55e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Add Glow.png using Guid(7724d2fa1a180bc43968a0a414b55e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be058c1f8265d7b6c3c23c538a6ebfcb') in 0.023730 seconds 
+  Import took 0.030810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000531 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Armor Glow.png
+  artifactKey: Guid(264ea33392537064c9608be6535ec11b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Armor Glow.png using Guid(264ea33392537064c9608be6535ec11b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '243c36739769e1b5a90f1fb711616a66') in 0.023153 seconds 
+  Import took 0.030051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Arrow Left.png
+  artifactKey: Guid(3489ba026a2008448a1bd95311e6f83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Arrow Left.png using Guid(3489ba026a2008448a1bd95311e6f83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18c4f4799ca095939a07954a89caaa1') in 0.021964 seconds 
+  Import took 0.029102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.521086 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Arrow Right.png
+  artifactKey: Guid(f509a879e289aa1488148ff78277c5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Arrow Right.png using Guid(f509a879e289aa1488148ff78277c5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4c1edc5d36c1b459013aa26dd7b6df7') in 0.020784 seconds 
+  Import took 0.028013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Audio Device.png
+  artifactKey: Guid(10b64ede9a66119419847a8d6a2c068b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Audio Device.png using Guid(10b64ede9a66119419847a8d6a2c068b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7cf2fb863bfd43f0c58dd67a0bd5f27') in 0.023521 seconds 
+  Import took 0.030261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Glow & Shadow/Background Glow.png
+  artifactKey: Guid(3bbd2502d7b4158498063b1c4ade2b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Glow & Shadow/Background Glow.png using Guid(3bbd2502d7b4158498063b1c4ade2b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c470364a8877708e90be3c96eaf2100b') in 0.024918 seconds 
+  Import took 0.032087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Background/Background Basic.png
+  artifactKey: Guid(59da25cc8872f164da4db6b05ad99d57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Background/Background Basic.png using Guid(59da25cc8872f164da4db6b05ad99d57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f05d23fa7487c6651cee7fa956920d22') in 0.047769 seconds 
+  Import took 0.054985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Audio.png
+  artifactKey: Guid(dc3c35513efc7e6408c1cd524b09a39f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Audio.png using Guid(dc3c35513efc7e6408c1cd524b09a39f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35567b395ab2918a8703d109ce6d6520') in 0.023845 seconds 
+  Import took 0.030453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Arrow Right.png
+  artifactKey: Guid(f509a879e289aa1488148ff78277c5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Arrow Right.png using Guid(f509a879e289aa1488148ff78277c5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4c1edc5d36c1b459013aa26dd7b6df7') in 0.012258 seconds 
+  Import took 0.018699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.722692 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Brightness.png
+  artifactKey: Guid(ca04d95a0058ca449864525eef179624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Brightness.png using Guid(ca04d95a0058ca449864525eef179624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ba747700111955fd5737787dc69d42f') in 0.022978 seconds 
+  Import took 0.030684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Campaign.png
+  artifactKey: Guid(b2da03b2d2ac6364cb7a41e53b82e604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Campaign.png using Guid(b2da03b2d2ac6364cb7a41e53b82e604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab600af6e724fc88f89ad03e854d1809') in 0.021868 seconds 
+  Import took 0.029783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Cancel.png
+  artifactKey: Guid(6efddec039515f245bfc9ddbbaa547fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Cancel.png using Guid(6efddec039515f245bfc9ddbbaa547fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '542aa8d78dc2bee949faa381c90ecfb1') in 0.023674 seconds 
+  Import took 0.030549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056133 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Check.png
+  artifactKey: Guid(fe74d3b484063cc408cfac46d38f9a86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Check.png using Guid(fe74d3b484063cc408cfac46d38f9a86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92e0765e12e59bd4e73afbcb86771bae') in 0.023764 seconds 
+  Import took 0.030276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Obi/Samples/Common/SampleResources/Textures/checker.psd
+  artifactKey: Guid(8fbd9c5f957b8434883cdfce9d6a3c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/Common/SampleResources/Textures/checker.psd using Guid(8fbd9c5f957b8434883cdfce9d6a3c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a89af93818126b93a52eb84b9c1034f9') in 0.024384 seconds 
+  Import took 0.031282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.668403 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Dash 2 64px - Stroke 10px.png
+  artifactKey: Guid(f240b89ab1539254090d4ec9534dea86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Dash 2 64px - Stroke 10px.png using Guid(f240b89ab1539254090d4ec9534dea86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25088c26d908823fe51b084ac5cbad04') in 0.022089 seconds 
+  Import took 0.028788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Filled.png
+  artifactKey: Guid(c26a820b2129e2f4eb122efd27df5339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Filled.png using Guid(c26a820b2129e2f4eb122efd27df5339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cfbd5e1c430cc7238bad92e6ef63108') in 0.028448 seconds 
+  Import took 0.035028 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Glow & Shadow/Circle Filled Glow.png
+  artifactKey: Guid(447f19d95ff0c504da9f0a9dacc358d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Glow & Shadow/Circle Filled Glow.png using Guid(447f19d95ff0c504da9f0a9dacc358d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7184e490f82b97d58e32d719535d1d') in 0.028598 seconds 
+  Import took 0.035521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018534 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Glow & Shadow/Circle Glow.png
+  artifactKey: Guid(2262c11ab431e464abeb7b53cfeaecac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Glow & Shadow/Circle Glow.png using Guid(2262c11ab431e464abeb7b53cfeaecac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ed5ec7dbccdcdbe39a239d1cb37e5a') in 0.026358 seconds 
+  Import took 0.033286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 12px.png
+  artifactKey: Guid(4d524fbec1ad7524f8e44324e211e893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 12px.png using Guid(4d524fbec1ad7524f8e44324e211e893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb5dd00f0dc38100cb1efb4c8b578f7') in 0.025965 seconds 
+  Import took 0.032736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 8px.png
+  artifactKey: Guid(9421aca318e009a4792d1bb95480e2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 8px.png using Guid(9421aca318e009a4792d1bb95480e2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c2e0e3a406450c49a45987d5fe4467c') in 0.023130 seconds 
+  Import took 0.030384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 3px.png
+  artifactKey: Guid(2210141fc23cbcf438279f50eb4fcd74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 3px.png using Guid(2210141fc23cbcf438279f50eb4fcd74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed40f0ab2889745cad53c28e5487d3fc') in 0.026275 seconds 
+  Import took 0.033373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 5px.png
+  artifactKey: Guid(0dba7f4bcc17ba64a8acc762f75a6050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 5px.png using Guid(0dba7f4bcc17ba64a8acc762f75a6050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ef5adeaa5caefcb291c8592cbd38f28') in 0.023067 seconds 
+  Import took 0.030210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 10px.png
+  artifactKey: Guid(6b0161e21a59dc14e96feff1ada41989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 10px.png using Guid(6b0161e21a59dc14e96feff1ada41989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e13e574ab6c1ba27b9160065eabbe579') in 0.023505 seconds 
+  Import took 0.030457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.382506 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 14px.png
+  artifactKey: Guid(c8d56a8699823ca46aa7eda6801a483e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 14px.png using Guid(c8d56a8699823ca46aa7eda6801a483e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '853ab9cd3770a86d6ce1cf6c5b82136f') in 0.022439 seconds 
+  Import took 0.030246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000372 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 16px.png
+  artifactKey: Guid(aa2a89f62c544a54692da9f0c22a44e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 16px.png using Guid(aa2a89f62c544a54692da9f0c22a44e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca94e28fa17b50aac5f2901a732caa7a') in 0.024806 seconds 
+  Import took 0.031864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 18px.png
+  artifactKey: Guid(193385f2143dfe14ba7e5bf010526989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 18px.png using Guid(193385f2143dfe14ba7e5bf010526989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '160b8718a944e0d68d044cd6268c3e1e') in 0.023648 seconds 
+  Import took 0.031076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.023233 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 20px.png
+  artifactKey: Guid(eb5b293700185344e9c5653bb0e49c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline - Stroke 20px.png using Guid(eb5b293700185344e9c5653bb0e49c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1814fece2d36aa127d6a710b9f16186d') in 0.026089 seconds 
+  Import took 0.033757 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline Dash - Stroke 3px.png
+  artifactKey: Guid(24de22fe090ea2a4b932c13f1b3be37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Circle/Circle Outline Dash - Stroke 3px.png using Guid(24de22fe090ea2a4b932c13f1b3be37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1daf0bd5472a8666fd3ebce6f02c429b') in 0.024319 seconds 
+  Import took 0.031039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Glow & Shadow/Circle Outline Glow 64px.png
+  artifactKey: Guid(f5e0dae9101c789459d12c3ce61f30cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Glow & Shadow/Circle Outline Glow 64px.png using Guid(f5e0dae9101c789459d12c3ce61f30cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef5c57968edafb1dc9acf56dc98f2ea') in 0.023955 seconds 
+  Import took 0.030546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.581634 seconds.
+  path: Assets/Obi/Editor/Resources/ClearButton.psd
+  artifactKey: Guid(e6e3e5775eebd49e6aee6abb8470baa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/ClearButton.psd using Guid(e6e3e5775eebd49e6aee6abb8470baa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42cf446a4c2048109110b914fb363605') in 0.017927 seconds 
+  Import took 0.026613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Obi/Editor/Resources/ClearTethersButton.psd
+  artifactKey: Guid(0458bb2ee7da84bf6b990ed5679e8e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/ClearTethersButton.psd using Guid(0458bb2ee7da84bf6b990ed5679e8e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '936c6b55b3fb8084eb830f08c3a2cb7e') in 0.019420 seconds 
+  Import took 0.025709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern.png
+  artifactKey: Guid(a60971e26baf9443db442cd7e2ba5b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern.png using Guid(a60971e26baf9443db442cd7e2ba5b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43e73f36cf211a62a441770e9ee76f4d') in 0.030328 seconds 
+  Import took 0.042747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.086447 seconds.
+  path: Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern_SM.psd
+  artifactKey: Guid(83fe5f7b163cd49d085e4275cbf28473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern_SM.psd using Guid(83fe5f7b163cd49d085e4275cbf28473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53f4de73964bc6b31750338d25eb98d0') in 0.025367 seconds 
+  Import took 0.032657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/ExampleAssets/Textures/Props/Construction_Light/ConstructionLight_Albedo.tif
+  artifactKey: Guid(2ec6e1532acb1254f9f3797b5d82db44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Textures/Props/Construction_Light/ConstructionLight_Albedo.tif using Guid(2ec6e1532acb1254f9f3797b5d82db44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da21dd74a18bd38808799400509a4cb2') in 0.026609 seconds 
+  Import took 0.034839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.286352 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Controls.png
+  artifactKey: Guid(5183f83e80c19f94fa1f957bb9b06c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Controls.png using Guid(5183f83e80c19f94fa1f957bb9b06c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb9536fbe681d63337cd22a8b7ddbc6') in 0.028308 seconds 
+  Import took 0.036770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Cursor.png
+  artifactKey: Guid(16b22705e429b8e4b91e671e81434cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Cursor.png using Guid(16b22705e429b8e4b91e671e81434cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af87fbea49f6e7945547db2825a27a05') in 0.019535 seconds 
+  Import took 0.026319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame - 2px.png
+  artifactKey: Guid(eebeb331280e9b240b4179b24765298f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame - 2px.png using Guid(eebeb331280e9b240b4179b24765298f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e48039c76cc319dee22b3f360a466fe') in 0.022442 seconds 
+  Import took 0.030346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame - 3px.png
+  artifactKey: Guid(465cd841017ec5b42b92b8b90e5094f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame - 3px.png using Guid(465cd841017ec5b42b92b8b90e5094f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97971bd08c98073d034145bca09d7c90') in 0.022716 seconds 
+  Import took 0.029951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.585845 seconds.
+  path: Assets/ExampleAssets/Textures/Props/Construction_Light/ConstructionLight_MetallicOcculusionSmoothness.tif
+  artifactKey: Guid(9a81f1a59f171804e84fce76584bdcb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Textures/Props/Construction_Light/ConstructionLight_MetallicOcculusionSmoothness.tif using Guid(9a81f1a59f171804e84fce76584bdcb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2117648178b91eaa13df61300c44c945') in 0.012948 seconds 
+  Import took 0.020288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 79.881188 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame - 4px.png
+  artifactKey: Guid(a5163ebfabfbbaa42b31761c746b992a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame - 4px.png using Guid(a5163ebfabfbbaa42b31761c746b992a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52233a2699bd1de144efd577124765eb') in 0.025022 seconds 
+  Import took 0.033920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Big - 6px (200ppu).png
+  artifactKey: Guid(235a0c40b1e7b994ab7ea60769a04d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Big - 6px (200ppu).png using Guid(235a0c40b1e7b994ab7ea60769a04d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10de28008f109f8c0a8e8f8e45f96f96') in 0.018121 seconds 
+  Import took 0.025178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame - 5px.png
+  artifactKey: Guid(af1452e8f1b39854ebdee8c724fa8c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame - 5px.png using Guid(af1452e8f1b39854ebdee8c724fa8c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36129cd1e2f8ba3081ead8df84c2f90c') in 0.023987 seconds 
+  Import took 0.030552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.796109 seconds.
+  path: Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern_SM.psd
+  artifactKey: Guid(83fe5f7b163cd49d085e4275cbf28473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern_SM.psd using Guid(83fe5f7b163cd49d085e4275cbf28473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd837231ac8da2071385fbb1a2291d315') in 0.012051 seconds 
+  Import took 0.019493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014671 seconds.
+  path: Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern_SM.psd
+  artifactKey: Guid(83fe5f7b163cd49d085e4275cbf28473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern_SM.psd using Guid(83fe5f7b163cd49d085e4275cbf28473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd837231ac8da2071385fbb1a2291d315') in 0.009366 seconds 
+  Import took 0.016013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.442291 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Big - 6px (300ppu).png
+  artifactKey: Guid(ffabf597f2e2f2544b302a3053bbf3df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Big - 6px (300ppu).png using Guid(ffabf597f2e2f2544b302a3053bbf3df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf682f2eb230ed4de787c512295b3fe') in 0.023211 seconds 
+  Import took 0.030223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Corner.png
+  artifactKey: Guid(92dc52eeb936ec246ac844315b803cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Corner.png using Guid(92dc52eeb936ec246ac844315b803cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83e602e7f3cf43a4a1f86b26b98d3c41') in 0.023633 seconds 
+  Import took 0.030914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Corner Glow.png
+  artifactKey: Guid(bd9ea8f2f5e35784382fafaa0b8cce8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Corner Glow.png using Guid(bd9ea8f2f5e35784382fafaa0b8cce8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '388f4a111d1908e37e50759108f88953') in 0.021562 seconds 
+  Import took 0.028664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Glow Big.png
+  artifactKey: Guid(64d33ea30e2bafa4caaee24128fd5d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Glow Big.png using Guid(64d33ea30e2bafa4caaee24128fd5d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b437bcac02e631685357e4920f19a695') in 0.026143 seconds 
+  Import took 0.033898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Big.png
+  artifactKey: Guid(ec5758608299d7640a970e6a2d3cc107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Big.png using Guid(ec5758608299d7640a970e6a2d3cc107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '640167d731a96482c76daef07165fc08') in 0.023833 seconds 
+  Import took 0.031901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Big (200ppu).png
+  artifactKey: Guid(df57fed132e9eba448cfb8d87788318c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Big (200ppu).png using Guid(df57fed132e9eba448cfb8d87788318c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1536cd06dd60c62977f994dcf0605bc4') in 0.022950 seconds 
+  Import took 0.029269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Big (300ppu).png
+  artifactKey: Guid(fe5c69cb52e569a40b68fc63f7fb5fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Big (300ppu).png using Guid(fe5c69cb52e569a40b68fc63f7fb5fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcdcb00f8cb014d8d62dea6e00370b72') in 0.021731 seconds 
+  Import took 0.028682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Glow.png
+  artifactKey: Guid(6f7b6c7e47f6aa14b9a42b09b176aa44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Glow.png using Guid(6f7b6c7e47f6aa14b9a42b09b176aa44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e4871ea87ea31ab275738a432f06de0') in 0.024107 seconds 
+  Import took 0.031166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled.png
+  artifactKey: Guid(dc2366542d8657842a8bf5378c77bee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled.png using Guid(dc2366542d8657842a8bf5378c77bee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6dba2ac70c5994e0f8114b9d14fdcb') in 0.025566 seconds 
+  Import took 0.032536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.220514 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Glow Big (200ppu).png
+  artifactKey: Guid(8404351357df2d04a85f51a4a8fce775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Filled Glow Big (200ppu).png using Guid(8404351357df2d04a85f51a4a8fce775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72eb64e4144dcd05c589e4ae16d83eab') in 0.023775 seconds 
+  Import took 0.032513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 2px.png
+  artifactKey: Guid(ab5984e9a371c6946b4d99ebf5bf6de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 2px.png using Guid(ab5984e9a371c6946b4d99ebf5bf6de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '374b040535fe8eb7f38fb9ca161cda05') in 0.031242 seconds 
+  Import took 0.039772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow - 2px.png
+  artifactKey: Guid(0547e3e376b85944993f12b7af334da1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow - 2px.png using Guid(0547e3e376b85944993f12b7af334da1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b59ccc01bec4daf52f043148d65cd71') in 0.031706 seconds 
+  Import took 0.040876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow - 4px.png
+  artifactKey: Guid(5e3a9a99fdbac704e8ab0602c0421a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow - 4px.png using Guid(5e3a9a99fdbac704e8ab0602c0421a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edb544b1dc352304bdac9d267b90bdc5') in 0.030537 seconds 
+  Import took 0.037975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow - 3px.png
+  artifactKey: Guid(671a5b730f15d06488ea1d7cf4e65e6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow - 3px.png using Guid(671a5b730f15d06488ea1d7cf4e65e6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd979ce417014f879bc58aec5d7956d01') in 0.030419 seconds 
+  Import took 0.039140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow - 5px.png
+  artifactKey: Guid(74d185566d32ed349931608f17e81b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow - 5px.png using Guid(74d185566d32ed349931608f17e81b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f58c28e33b5439df99c530d42005a887') in 0.030896 seconds 
+  Import took 0.039655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.450151 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 3px.png
+  artifactKey: Guid(69e9b040443b6154c9c616643683ebc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 3px.png using Guid(69e9b040443b6154c9c616643683ebc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30a3bf5d1daa3ba26458d019414a8dcb') in 0.023282 seconds 
+  Import took 0.030391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 6px (200ppu).png
+  artifactKey: Guid(1af7d27fbf145f249b1f56d1a95461d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 6px (200ppu).png using Guid(1af7d27fbf145f249b1f56d1a95461d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aac33a1877a2e3f9a5556bfe452c190b') in 0.025319 seconds 
+  Import took 0.032352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 4px.png
+  artifactKey: Guid(953c61c32d49dfb4f84fbe189e7d44b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 4px.png using Guid(953c61c32d49dfb4f84fbe189e7d44b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb0ae7b8a4d2a7862bc18a446cc5f2e') in 0.024047 seconds 
+  Import took 0.031211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000485 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 5px.png
+  artifactKey: Guid(3b760e77bf50f1c45819d6d799bb7b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 5px.png using Guid(3b760e77bf50f1c45819d6d799bb7b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52d875e5880265d63e82633af8f0a43c') in 0.023974 seconds 
+  Import took 0.031899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 7px (250ppu).png
+  artifactKey: Guid(c443d05295ef1e941be4c36b693a977e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 7px (250ppu).png using Guid(c443d05295ef1e941be4c36b693a977e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17720a01d4ce3402bf8ed4693d5708a') in 0.022240 seconds 
+  Import took 0.029362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 6px (250ppu).png
+  artifactKey: Guid(6f7f3484eece09443a60b6ac08cec003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 6px (250ppu).png using Guid(6f7f3484eece09443a60b6ac08cec003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b321850f8ee61310d8556f60746f2b6') in 0.023527 seconds 
+  Import took 0.031097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.397701 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 8px (200ppu).png
+  artifactKey: Guid(63832d6b0647359468f48d30a178751c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Cut/Cut Frame Glow Big - 8px (200ppu).png using Guid(63832d6b0647359468f48d30a178751c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe9c8cf06886466688398166f96da684') in 0.021808 seconds 
+  Import took 0.028647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Obi/Samples/RopeAndRod/SampleResources/Textures/cylinder_NRM.png
+  artifactKey: Guid(7a6d7fa80b2a444089c9b87ba93966c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/RopeAndRod/SampleResources/Textures/cylinder_NRM.png using Guid(7a6d7fa80b2a444089c9b87ba93966c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '571283ac6c80982ca7b27b8568a45a40') in 0.021219 seconds 
+  Import took 0.028524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Dev Console.png
+  artifactKey: Guid(89bd73610bc127c4e826009e4cc49503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Dev Console.png using Guid(89bd73610bc127c4e826009e4cc49503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c7ddd171656ec6ee58562273433897c') in 0.024241 seconds 
+  Import took 0.031161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.372413 seconds.
+  path: Assets/Obi/Editor/Resources/EditCurves.psd
+  artifactKey: Guid(5de08540b1d0e4ed9b02351ecf5fb429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/EditCurves.psd using Guid(5de08540b1d0e4ed9b02351ecf5fb429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0158d23acbc0ef18d881874302315dee') in 0.019073 seconds 
+  Import took 0.026401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Obi/Editor/Resources/EditParticles.psd
+  artifactKey: Guid(8ec838b6f6b4a49c5b127c7342c6657b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/EditParticles.psd using Guid(8ec838b6f6b4a49c5b127c7342c6657b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9729eb64f2d35f6c318ff29a0e1c2e07') in 0.018194 seconds 
+  Import took 0.025200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.413790 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Exit.png
+  artifactKey: Guid(1db504cd78474d34e840e6f94dc1e26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Icon/Exit.png using Guid(1db504cd78474d34e840e6f94dc1e26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7d9840511629033dfdd5075c167af05') in 0.020600 seconds 
+  Import took 0.027408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Background/FHD Render Texture.renderTexture
+  artifactKey: Guid(16267721f170fba44b7b7d6949aca33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Background/FHD Render Texture.renderTexture using Guid(16267721f170fba44b7b7d6949aca33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29f8e3d6f5985a252ea816938823e2d3') in 0.030363 seconds 
+  Import took 0.037543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Obi/Editor/Resources/FillButton.psd
+  artifactKey: Guid(5aa30f0cf5bab4c7dab839a28bd5a3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/FillButton.psd using Guid(5aa30f0cf5bab4c7dab839a28bd5a3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3369d23c1ac2abb1937879491736a965') in 0.018643 seconds 
+  Import took 0.026298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Background/FHD Render Texture.renderTexture
+  artifactKey: Guid(16267721f170fba44b7b7d6949aca33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Background/FHD Render Texture.renderTexture using Guid(16267721f170fba44b7b7d6949aca33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29f8e3d6f5985a252ea816938823e2d3') in 0.008309 seconds 
+  Import took 0.014753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.428066 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Square/Filled Square.png
+  artifactKey: Guid(6d0e7b4cbc31762469067cda2c4136f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Square/Filled Square.png using Guid(6d0e7b4cbc31762469067cda2c4136f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7d04eeeb3f43550a47a364e3bfbe607') in 0.021641 seconds 
+  Import took 0.029263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Square/Filled Square Glow.png
+  artifactKey: Guid(fc01a4a612e79e14094d3a06a0ac5f35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Textures/Border/Square/Filled Square Glow.png using Guid(fc01a4a612e79e14094d3a06a0ac5f35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f251ae393d27edb03158655a3c1278b') in 0.022617 seconds 
+  Import took 0.029301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.173214 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-SemiBold.ttf
+  artifactKey: Guid(28b6d07166d6d8947a6671e5480cbf66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-SemiBold.ttf using Guid(28b6d07166d6d8947a6671e5480cbf66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b183b96b689e7e9d86ccf1d66e8748c2') in 0.158281 seconds 
+  Import took 0.165817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Bold.ttf
+  artifactKey: Guid(09f5f6f2c59fdf2449740899f95946b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Bold.ttf using Guid(09f5f6f2c59fdf2449740899f95946b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6466972093d68c5ec5a9e6fc7083ef3') in 0.026104 seconds 
+  Import took 0.033225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Regular.ttf
+  artifactKey: Guid(11524516bb0f95d4ba72a86cdd3756e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Regular.ttf using Guid(11524516bb0f95d4ba72a86cdd3756e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd8b19d6099607ca85b99ea52cfcdc51') in 0.026260 seconds 
+  Import took 0.034243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Light.ttf
+  artifactKey: Guid(c80a75828daeb6845bf4a27bc3893964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Light.ttf using Guid(c80a75828daeb6845bf4a27bc3893964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '805df707732cfd8ec278985abe7c2253') in 0.027232 seconds 
+  Import took 0.034823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Medium.ttf
+  artifactKey: Guid(277effe82d58fa34c9041017eb398c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutsiderAssets/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Medium.ttf using Guid(277effe82d58fa34c9041017eb398c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd607c7c6860da44a62c8887776cbfc4') in 0.026228 seconds 
+  Import took 0.033076 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.033278 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\Hercules\Documents\GitHub\Aircraft_Tire_Care_Simulator\VR_Aircraft_Tire_Care_Simulator\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\Hercules\Documents\GitHub\Aircraft_Tire_Care_Simulator\VR_Aircraft_Tire_Care_Simulator\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00047] in <44c3723143904fb88deebc993c7bb491>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.439 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1439ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (1224ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (303ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (620ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (500ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Unloading 3968 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 183.7 MB.
+System memory in use after: 183.9 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 4681.
+Total: 4.248000 ms (FindLiveObjects: 0.635500 ms CreateObjectMapping: 0.221100 ms MarkObjects: 3.356700 ms  DeleteObjects: 0.033200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
